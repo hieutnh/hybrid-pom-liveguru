@@ -1,2 +1,4 @@
 eclipse.preferences.version=1
-encoding//testcases/com/nopcommerce/users/Level_01_Register_Login.java=UTF-8
+encoding//testcases/com/nopcommerce/users/Levek_01_Register_Login_Step_By_Step.java=UTF-8
+encoding//testcases/com/nopcommerce/users/Level_02_Register_Login_comment_function.java=UTF-8
+encoding//testcases/com/nopcommerce/users/Level_03_Register_Login_Page_Object.java=UTF-8

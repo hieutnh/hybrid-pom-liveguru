@@ -353,10 +353,20 @@ public class AbstracPage {
 
 		return explicitWait.until(jQueryLoad) && explicitWait.until(jsLoad);
 	}
+	
+	public void waitToElementPresence(WebDriver driver, String locator) {
+		explicitWait = new WebDriverWait(driver, 30);
+		explicitWait.until(ExpectedConditions.presenceOfElementLocated(getByXpath(locator)));
+	}
 
 	public void waitToElementVisible(WebDriver driver, String locator) {
 		explicitWait = new WebDriverWait(driver, 30);
 		explicitWait.until(ExpectedConditions.visibilityOfElementLocated(getByXpath(locator)));
+	}
+	
+	public void waitToElementInvisible(WebDriver driver, String locator) {
+		explicitWait = new WebDriverWait(driver, 30);
+		explicitWait.until(ExpectedConditions.invisibilityOfElementLocated(getByXpath(locator)));
 	}
 
 	public void waitToElementClickAble(WebDriver driver, String locator) {
