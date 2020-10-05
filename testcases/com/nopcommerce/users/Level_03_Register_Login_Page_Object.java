@@ -11,13 +11,13 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-import commons.AbstracPage;
+import commons.AbstractPage;
 import pageOjects.customerInfoPageObject;
 import pageOjects.homePageObject;
 import pageOjects.loginPageObject;
 import pageOjects.registerPageObject;
 
-public class Level_03_Register_Login_Page_Object extends AbstracPage {
+public class Level_03_Register_Login_Page_Object {
 	WebDriver driver;
 	Select select;
 	String email, pass, firstname, lastname;
@@ -28,7 +28,7 @@ public class Level_03_Register_Login_Page_Object extends AbstracPage {
 //		driver = new ChromeDriver();
 		System.setProperty("webdriver.gecko.driver", ".\\Driver_Browser\\geckodriver.exe");
 		driver = new FirefoxDriver();
-		openPageUrl(driver, "https://demo.nopcommerce.com/register");
+		driver.get("https://demo.nopcommerce.com/register");
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		driver.manage().window().maximize();
 		firstname = "test";

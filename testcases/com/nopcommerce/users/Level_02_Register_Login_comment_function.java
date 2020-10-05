@@ -11,9 +11,9 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-import commons.AbstracPage;
+import commons.AbstractPage;
 
-public class Level_02_Register_Login_comment_function extends AbstracPage {
+public class Level_02_Register_Login_comment_function extends AbstractPage {
 	WebDriver driver;
 	Select select;
 	String email, pass;
