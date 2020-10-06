@@ -27,11 +27,12 @@ public class Level_04_Register_Login_Multiple_Browser extends AbstractTest {
 		lastname = "thoima";
 		email = "testthoima" + getRanDom() + "@gmail.com";
 		pass = "123456";
-		homePage = new homePageObject(driver);
+
 	}
 
 	@Test
 	public void TC_01_Register() {
+		homePage = new homePageObject(driver);
 		homePage.clickToRegisterLink();
 
 		registerPage = new registerPageObject(driver);

@@ -111,6 +111,9 @@ public class AbstractPage {
 	}
 
 	public void clickToElement(WebDriver driver, String loacator) {
+		if (driver.toString().toLowerCase().contains("edge")) {
+			sleepInMiliSecond(500);
+		}
 		element = getElement(driver, loacator);
 		element.click();
 	}
@@ -166,6 +169,14 @@ public class AbstractPage {
 	public void sleepInSecond(long timeout) {
 		try {
 			Thread.sleep(timeout * 1000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+	}
+	
+	public void sleepInMiliSecond(long timeout) {
+		try {
+			Thread.sleep(timeout);
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}

@@ -6,8 +6,12 @@ import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
+import io.github.bonigarcia.wdm.config.OperatingSystem;
 
 public class AbstractTest {
 	private WebDriver driver;
@@ -16,28 +20,31 @@ public class AbstractTest {
 	protected WebDriver getBrowserDriver(String BrowserName) {
 
 		if (BrowserName.equalsIgnoreCase("firefox_ui")) {
-			System.setProperty("webdriver.gecko.driver", sourceFolder + "\\Driver_Browser\\geckodriver.exe");
+			WebDriverManager.firefoxdriver().setup();
 			driver = new FirefoxDriver();
 		} else if (BrowserName.equalsIgnoreCase("chrome_ui")) {
-			System.setProperty("webdriver.chrome.driver", sourceFolder + "\\Driver_Browser\\chromedriver.exe");
+			WebDriverManager.chromedriver().setup();
 			ChromeOptions options = new ChromeOptions();
 			// dissable infobars chrome
 			options.setExperimentalOption("excludeSwitches", Collections.singletonList("enable-automation"));
 			options.setExperimentalOption("useAutomationExtension", false);
 			driver = new ChromeDriver(options);
 		} else if (BrowserName.equalsIgnoreCase("firefox_headless")) {
-			System.setProperty("webdriver.gecko.driver", sourceFolder + "\\Driver_Browser\\geckodriver.exe");
+			WebDriverManager.firefoxdriver().setup();
 			// chạy firefox headless
 			FirefoxOptions options = new FirefoxOptions();
 			options.setHeadless(true);
 			driver = new FirefoxDriver(options);
 		} else if (BrowserName.equalsIgnoreCase("chrome_headless")) {
-			System.setProperty("webdriver.chrome.driver", sourceFolder + "\\Driver_Browser\\chromedriver.exe");
+			WebDriverManager.chromedriver().setup();
 			// chạy chrome headless
 			ChromeOptions options = new ChromeOptions();
 			options.addArguments("headless");
 			options.addArguments("window-size=1366x768");
 			driver = new ChromeDriver(options);
+		} else if (BrowserName.equalsIgnoreCase("edge_chromium")) {
+			WebDriverManager.edgedriver().operatingSystem(OperatingSystem.WIN).setup();
+			driver = new EdgeDriver();
 		} else {
 			throw new RuntimeException("Please input valid browser name");
 		}

@@ -6,7 +6,6 @@ import commons.AbstractPage;
 import pageUIs.HomePageUI;
 
 public class homePageObject extends AbstractPage {
-
 	WebDriver driver;
 
 	public homePageObject(WebDriver driver) {
