@@ -8,5 +8,6 @@ public class CustomerInfoPageUI {
 	public static final String MONTH_DROPDOWN = "//select[@name='DateOfBirthMonth']";
 	public static final String YEAR_DROPDOWN = "//select[@name='DateOfBirthYear']";
 	public static final String EMAIL_TEXBOX = "//input[@id='Email']";
+	
 
 }

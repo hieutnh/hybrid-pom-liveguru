@@ -3,6 +3,7 @@ package commons;
 import java.util.Collections;
 import java.util.Random;
 import java.util.concurrent.TimeUnit;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -11,7 +12,6 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
-import io.github.bonigarcia.wdm.config.OperatingSystem;
 
 public class AbstractTest {
 	private WebDriver driver;
@@ -43,7 +43,7 @@ public class AbstractTest {
 			options.addArguments("window-size=1366x768");
 			driver = new ChromeDriver(options);
 		} else if (BrowserName.equalsIgnoreCase("edge_chromium")) {
-			WebDriverManager.edgedriver().operatingSystem(OperatingSystem.WIN).setup();
+			WebDriverManager.edgedriver().setup();
 			driver = new EdgeDriver();
 		} else {
 			throw new RuntimeException("Please input valid browser name");

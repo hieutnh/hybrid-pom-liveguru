@@ -12,7 +12,7 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-public class Levek_01_Register_Login_Step_By_Step {
+public class Level_01_Register_Login_Step_By_Step {
 	WebDriver driver;
 	Select select;
 

@@ -9,18 +9,20 @@ public class homePageObject extends AbstractPage {
 	WebDriver driver;
 
 	public homePageObject(WebDriver driver) {
+		//lấy biến toàn cục vô biến cục bộ
 		this.driver = driver;
 	}
 
-	public void clickToRegisterLink() {
+	public registerPageObject clickToRegisterLink() {
 		waitToElementClickAble(driver, HomePageUI.REGISTER_LINK);
 		clickToElement(driver, HomePageUI.REGISTER_LINK);
-
+		return PageGeneratorManager.getRegisterPage(driver);
 	}
 
-	public void clickToLoginButton() {
+	public loginPageObject clickToLoginButton() {
 		waitToElementClickAble(driver, HomePageUI.LOGIN_BUTTON);
 		clickToElement(driver, HomePageUI.LOGIN_BUTTON);
+		return PageGeneratorManager.getLoginPage(driver);
 
 	}
 
@@ -29,9 +31,10 @@ public class homePageObject extends AbstractPage {
 		return isElementDisplayed(driver, HomePageUI.MY_ACCOUNT_LINK);
 	}
 
-	public void clickToMyAccountLink() {
+	public customerInfoPageObject clickToMyAccountLink() {
 		waitToElementClickAble(driver, HomePageUI.MY_ACCOUNT_LINK);
 		clickToElement(driver, HomePageUI.MY_ACCOUNT_LINK);
+		return PageGeneratorManager.getCustomerInfoPage(driver);
 	}
 
 }

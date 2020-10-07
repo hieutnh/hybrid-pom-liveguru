@@ -1,90 +1,81 @@
 package com.nopcommerce.users;
 
-import java.util.Random;
-import java.util.concurrent.TimeUnit;
-
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
-
+import commons.AbstractTest;
+import pageOjects.PageGeneratorManager;
 import pageOjects.customerInfoPageObject;
 import pageOjects.homePageObject;
 import pageOjects.loginPageObject;
 import pageOjects.registerPageObject;
 
-public class Level_03_Register_Login_Page_Object {
+public class Level_05_Register_Login_Generator_Page extends AbstractTest {
 	WebDriver driver;
 	Select select;
 	String email, pass, firstname, lastname;
 
+	@Parameters("Browser")
 	@BeforeClass
-	public void beforeClass() {
-//		System.setProperty("webdriver.chrome.driver", ".\\Driver_Browser\\chromedriver.exe");
-//		driver = new ChromeDriver();
-		System.setProperty("webdriver.gecko.driver", ".\\Driver_Browser\\geckodriver.exe");
-		driver = new FirefoxDriver();
-		driver.get("https://demo.nopcommerce.com/register");
-		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-		driver.manage().window().maximize();
+	public void beforeClass(String BrowserName) {
+		driver = getBrowserDriver(BrowserName);
+
 		firstname = "test";
 		lastname = "thoima";
 		email = "testthoima" + getRanDom() + "@gmail.com";
 		pass = "123456";
-		
+
 	}
 
 	@Test
 	public void TC_01_Register() {
+
 		homePage = new homePageObject(driver);
-		homePage.clickToRegisterLink();
-		
-		registerPage = new registerPageObject(driver);
+		// viết các hàm khởi tạo các class trong pageObject vào class PageGeneratorManager
+		registerPage = PageGeneratorManager.getRegisterPage(driver);
+
 		registerPage.clickToGenderRadioButton();
-		
+
 		registerPage.inputToFirstName(firstname);
-		
+
 		registerPage.inputToLastName(lastname);
-		
+
 		registerPage.selectDayOfBirthDropDown("1");
 		Assert.assertEquals(registerPage.getSizeDayInlocator(), 32);
-		
+
 		registerPage.selectMonthOfBirthDropDown("May");
 		Assert.assertEquals(registerPage.getSizeMonthInlocator(), 13);
-		
+
 		registerPage.selectYearOfBirthDropDown("1980");
 		Assert.assertEquals(registerPage.getSizeYearInlocator(), 112);
-		
+
 		registerPage.inputEmailToTextBox(email);
 		registerPage.inputPassToTextBox(pass);
 		registerPage.inputConfirmPassToTextBox(pass);
 		registerPage.clickRegisterButton();
 		Assert.assertEquals(registerPage.getRegisterSuccessMessage(), "Your registration completed");
 		registerPage.clickToLogOutButton();
-		
-		homePage = new homePageObject(driver);
-
 
 	}
+
 	@Test
 	public void TC_02_Log_In() {
-		homePage.clickToLoginButton();
-		
-		loginPage = new loginPageObject(driver);
+		homePage = new homePageObject(driver);
+		loginPage = PageGeneratorManager.getLoginPage(driver);
+
 		loginPage.inputToEmailTextBox(email);
 		loginPage.inputToPasswordTextBox(pass);
-		loginPage.clicktoLoginButton();
-		
-		homePage = new homePageObject(driver);
-		Assert.assertTrue(homePage.isDisplayMyAccountLink());
-		homePage.clickToMyAccountLink();
+		homePage = PageGeneratorManager.getHomePage(driver);
 
-		customerInfoPage = new customerInfoPageObject(driver);
+		Assert.assertTrue(homePage.isDisplayMyAccountLink());
+		customerInfoPage = PageGeneratorManager.getCustomerInfoPage(driver);
+
 	}
-	
+
 	@Test
 	public void TC_03_My_Account() {
 		Assert.assertTrue(customerInfoPage.isSeclectedGenderMaleRadio());
@@ -95,20 +86,14 @@ public class Level_03_Register_Login_Page_Object {
 		Assert.assertEquals(customerInfoPage.getTextInYearTextBox(), "1980");
 	}
 
-	public int getRanDom() {
-		Random rand = new Random();
-		return rand.nextInt(999999);
-	}
-
 	@AfterClass
 	public void afterClass() {
 		driver.quit();
 	}
-	
+
 	customerInfoPageObject customerInfoPage;
 	homePageObject homePage;
 	loginPageObject loginPage;
 	registerPageObject registerPage;
-	
 
 }

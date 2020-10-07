@@ -14,6 +14,15 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import pageOjects.ordersPageObject;
+import pageOjects.rewardPointsPageObject;
+import pageOjects.stockSubscriptionsObject;
+import pageOjects.PageGeneratorManager;
+import pageOjects.addressesPageObject;
+import pageOjects.customerInfoPageObject;
+import pageOjects.myProductReviewsPageObject;
+import pageUIs.AbstractPageUI;
+
 public class AbstractPage {
 
 	public void openPageUrl(WebDriver driver, String url) {
@@ -173,7 +182,7 @@ public class AbstractPage {
 			e.printStackTrace();
 		}
 	}
-	
+
 	public void sleepInMiliSecond(long timeout) {
 		try {
 			Thread.sleep(timeout);
@@ -364,7 +373,7 @@ public class AbstractPage {
 
 		return explicitWait.until(jQueryLoad) && explicitWait.until(jsLoad);
 	}
-	
+
 	public void waitToElementPresence(WebDriver driver, String locator) {
 		explicitWait = new WebDriverWait(driver, 30);
 		explicitWait.until(ExpectedConditions.presenceOfElementLocated(getByXpath(locator)));
@@ -374,7 +383,7 @@ public class AbstractPage {
 		explicitWait = new WebDriverWait(driver, 30);
 		explicitWait.until(ExpectedConditions.visibilityOfElementLocated(getByXpath(locator)));
 	}
-	
+
 	public void waitToElementInvisible(WebDriver driver, String locator) {
 		explicitWait = new WebDriverWait(driver, 30);
 		explicitWait.until(ExpectedConditions.invisibilityOfElementLocated(getByXpath(locator)));
@@ -384,6 +393,44 @@ public class AbstractPage {
 		explicitWait = new WebDriverWait(driver, 30);
 		explicitWait.until(ExpectedConditions.elementToBeClickable(getByXpath(locator)));
 	}
+
+	public ordersPageObject clickToOrderLink(WebDriver driver) {
+		waitToElementClickAble(driver, AbstractPageUI.ORDER_LINK);
+		clickToElement(driver, AbstractPageUI.ORDER_LINK);
+		return PageGeneratorManager.getOrderPage(driver);
+	}
+
+	public customerInfoPageObject clickToCustomerInfoPage(WebDriver driver) {
+		waitToElementClickAble(driver, AbstractPageUI.CUSTOMER_INFO_LINK);
+		clickToElement(driver, AbstractPageUI.CUSTOMER_INFO_LINK);
+		return PageGeneratorManager.getCustomerInfoPage(driver);
+	}
+
+	public myProductReviewsPageObject clickToMyProductPageLink(WebDriver driver) {
+		waitToElementClickAble(driver, AbstractPageUI.My_Product_Review_LINK);
+		clickToElement(driver, AbstractPageUI.My_Product_Review_LINK);
+		return PageGeneratorManager.getMyProductReviewsPage(driver);
+	}
+
+	public addressesPageObject clickToAddressLink(WebDriver driver) {
+		waitToElementClickAble(driver, AbstractPageUI.ADDRESSES_LINK);
+		clickToElement(driver, AbstractPageUI.ADDRESSES_LINK);
+		return PageGeneratorManager.getAddresesPage(driver);
+	}
+
+	public rewardPointsPageObject clickToRewardPoints(WebDriver driver) {
+		waitToElementClickAble(driver, AbstractPageUI.REWARD_POINTS_LINK);
+		clickToElement(driver, AbstractPageUI.REWARD_POINTS_LINK);
+		return PageGeneratorManager.getRewardPointsPage(driver);
+	}
+
+	public stockSubscriptionsObject clickToStockSubcriptions(WebDriver driver) {
+		waitToElementClickAble(driver, AbstractPageUI.STOCK_SUBCRIPTIONS);
+		clickToElement(driver, AbstractPageUI.STOCK_SUBCRIPTIONS);
+		return PageGeneratorManager.getStockSubscriptionsPage(driver);
+	}
+	
+
 
 	private WebDriverWait explicitWait;
 	private JavascriptExecutor jsExecutor;
