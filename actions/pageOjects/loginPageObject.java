@@ -13,21 +13,23 @@ public class loginPageObject extends AbstractPage {
 		this.driver = driver;
 	}
 
-	public homePageObject clicktoLoginButton() {
-		waitToElementClickAble(driver, LoginPageUI.LOGIN_BUTTON);
-		clickToElement(driver, LoginPageUI.LOGIN_BUTTON);
-		return PageGeneratorManager.getHomePage(driver);
-
+	public void inputUserNameTextBox(String username) {
+		waitToElementVisible(driver, LoginPageUI.USERNAME_TEXTBOX);
+		sendkeyToElement(driver, LoginPageUI.USERNAME_TEXTBOX, username);
+		
 	}
 
-	public void inputToEmailTextBox(String email) {
-		waitToElementVisible(driver, LoginPageUI.EMAIL_TEXTBOX);
-		sendkeyToElement(driver, LoginPageUI.EMAIL_TEXTBOX, email);
-	}
-
-	public void inputToPasswordTextBox(String pass) {
+	public void inputPasswordTextBox(String pass) {
 		waitToElementVisible(driver, LoginPageUI.PASSWORD_TEXTBOX);
 		sendkeyToElement(driver, LoginPageUI.PASSWORD_TEXTBOX, pass);
+	}
+
+	//có thể mang qua AbstractPage nếu bị lặp lại nhiều lần
+	public managerCustomersObject clickLoginButton() {
+		waitToElementClickAble(driver, LoginPageUI.LOGIN_BUTTON);
+		clickToElement(driver, LoginPageUI.LOGIN_BUTTON);
+		return PageGeneratorManager.getmanagerCustomersPage(driver);
+
 	}
 
 }
