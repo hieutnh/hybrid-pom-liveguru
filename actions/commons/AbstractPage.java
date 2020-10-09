@@ -14,11 +14,9 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import pageUIs.AbstractPageUI;
-
 public class AbstractPage {
-	
-	//**Hàm cho selenium WebBrowser
+
+	// **Hàm cho selenium WebBrowser
 	public void openPageUrl(WebDriver driver, String url) {
 		driver.get(url);
 
@@ -101,7 +99,7 @@ public class AbstractPage {
 		driver.switchTo().window(parentID);
 	}
 
-	//**hàm cho selenium WebElement
+	// **hàm cho selenium WebElement
 	public WebElement getElement(WebDriver driver, String locator) {
 		return driver.findElement(getByXpath(locator));
 	}
@@ -223,6 +221,10 @@ public class AbstractPage {
 
 	public int countElementSize(WebDriver driver, String locator) {
 		return getElements(driver, locator).size();
+	}
+
+	public int countElementSize(WebDriver driver, String locator, String... values) {
+		return getElements(driver, getDynamicLocator(locator, values)).size();
 	}
 
 	public void checkToCheckbox(WebDriver driver, String locator) {
@@ -432,15 +434,6 @@ public class AbstractPage {
 	public void waitToElementClickAble(WebDriver driver, String locator, String... values) {
 		explicitWait = new WebDriverWait(driver, GlobalConstants.LONG_TIMEOUT);
 		explicitWait.until(ExpectedConditions.elementToBeClickable(getByXpath(getDynamicLocator(locator, values))));
-	}
-
-
-		
-	
-	// Rest Parameter hàm dùng 1 locator để mở các link ko giới hạn bao nhiêu page (cách 2)
-	public void clickToAllLinkMyAccount2(WebDriver driver, String linkName) {
-		waitToElementClickAble(driver, AbstractPageUI.DYNAMIC_LINK, linkName);
-		clickToElement(driver, AbstractPageUI.DYNAMIC_LINK, linkName);
 	}
 
 	private WebDriverWait explicitWait;
