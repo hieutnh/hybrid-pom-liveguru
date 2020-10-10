@@ -1,5 +1,7 @@
 package pageOjects;
 
+import java.util.List;
+
 import org.openqa.selenium.WebDriver;
 
 import commons.AbstractPage;
@@ -54,12 +56,9 @@ public class managerCustomersObject extends AbstractPage {
 	}
 
 
-
-	public boolean isDisplayAllItemIsVietnam(String locatorColumnName, String value) {
-		waitToElementVisible(driver, ManagerCustomersUI.DYNAMIC_HEADER_COLUMNNAME, locatorColumnName);
-		String countElementGetIndex = String.valueOf(countElementSize(driver, ManagerCustomersUI.DYNAMIC_HEADER_COLUMNNAME, locatorColumnName) + 1);
-		int countAllElement = waitToElementVisible(driver, ManagerCustomersUI.DYNAMIC_HEADER_COLUMNNAME, locatorColumnName);
-		return 	isElementDisplayed(driver, ManagerCustomersUI.ALL_ELEMENT_IS_VIETNAM, countAllElement);
+	public void getSizeVietnam() {
+		waitToElementVisible(driver, ManagerCustomersUI.ALL_ELEMENT_IS_VIETNAM);
+		String countElementGetIndex = String.valueOf(countElementSize(driver, ManagerCustomersUI.ALL_ELEMENT_IS_VIETNAM));
 
 	}
 

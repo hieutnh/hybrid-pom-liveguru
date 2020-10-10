@@ -435,6 +435,7 @@ public class AbstractPage {
 		explicitWait = new WebDriverWait(driver, GlobalConstants.LONG_TIMEOUT);
 		explicitWait.until(ExpectedConditions.elementToBeClickable(getByXpath(getDynamicLocator(locator, values))));
 	}
+	
 
 	private WebDriverWait explicitWait;
 	private JavascriptExecutor jsExecutor;

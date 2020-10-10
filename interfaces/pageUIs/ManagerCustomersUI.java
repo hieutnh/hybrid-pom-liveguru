@@ -13,7 +13,7 @@ public class ManagerCustomersUI {
 	
 	
 	
-	public static final String ALL_ELEMENT_IS_VIETNAM = "//td[%s][contains(text(),'%s')]";
+	public static final String ALL_ELEMENT_IS_VIETNAM = "//td[contains(text(),'Vietnam')]//ancestor::tr";
 	
 	
 	

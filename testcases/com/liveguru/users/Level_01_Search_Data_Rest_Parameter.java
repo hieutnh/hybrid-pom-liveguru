@@ -59,8 +59,9 @@ public class Level_01_Search_Data_Rest_Parameter extends AbstractTest {
 	public void TC_02_Count_Element() {
 		managerCustomersPage.selectItemToListCountry("Country", "Vietnam");
 		managerCustomersPage.clickSearchDataButton("Search");
-		Assert.assertEquals(managerCustomersPage.isDisplayAllItemIsVietnam("Country", "Vietnam"), "20");
+		managerCustomersPage.getSizeVietnam();
 	}
+	
 
 	@AfterClass
 	public void afterClass() {
