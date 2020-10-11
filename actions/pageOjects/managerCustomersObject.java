@@ -59,6 +59,7 @@ public class managerCustomersObject extends AbstractPage {
 	public void getSizeVietnam() {
 		waitToElementVisible(driver, ManagerCustomersUI.ALL_ELEMENT_IS_VIETNAM);
 		String countElementGetIndex = String.valueOf(countElementSize(driver, ManagerCustomersUI.ALL_ELEMENT_IS_VIETNAM));
+		System.out.println(countElementGetIndex);
 
 	}
 

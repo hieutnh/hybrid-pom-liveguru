@@ -60,6 +60,7 @@ public class Level_01_Search_Data_Rest_Parameter extends AbstractTest {
 		managerCustomersPage.selectItemToListCountry("Country", "Vietnam");
 		managerCustomersPage.clickSearchDataButton("Search");
 		managerCustomersPage.getSizeVietnam();
+		
 	}
 	
 
