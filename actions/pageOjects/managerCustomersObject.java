@@ -55,9 +55,4 @@ public class managerCustomersObject extends AbstractPage {
 		return isElementDisplayed(driver, ManagerCustomersUI.DYNAMIC_VALUE_AT_SOME_COLUMN, rowNumber, countElementGetIndex, value);
 	}
 
-	public boolean getAllitemVietnam() {
-		getAllItemInColumn(driver, ManagerCustomersUI.ALL_ROW_VIETNAM, ManagerCustomersUI.ALL_COLUMN_VIETNAM, ManagerCustomersUI.ALL_COLUMNANDROW_VIETNAM);
-		return isElementDisplayed(driver, ManagerCustomersUI.ALL_COLUMNANDROW_VIETNAM);
-	}
-
 }
