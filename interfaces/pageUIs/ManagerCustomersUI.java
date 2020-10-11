@@ -14,6 +14,11 @@ public class ManagerCustomersUI {
 	
 	
 	public static final String ALL_ELEMENT_IS_VIETNAM = "//td[contains(text(),'Vietnam')]//ancestor::tr";
+	public static final String ALL_ROW_VIETNAM = "//table[@id='customerGrid_table']//tbody//tr";
+	public static final String ALL_COLUMN_VIETNAM = "//table[@id='customerGrid_table']//tbody//tr[1]//th";
+	public static final String ALL_COLUMNANDROW_VIETNAM = "//table[@id='customerGrid_table']//tbody//tr[1]//td[8]";
+	
+	
 	
 	
 	

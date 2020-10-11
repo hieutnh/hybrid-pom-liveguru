@@ -55,12 +55,9 @@ public class managerCustomersObject extends AbstractPage {
 		return isElementDisplayed(driver, ManagerCustomersUI.DYNAMIC_VALUE_AT_SOME_COLUMN, rowNumber, countElementGetIndex, value);
 	}
 
-
-	public void getSizeVietnam() {
-		waitToElementVisible(driver, ManagerCustomersUI.ALL_ELEMENT_IS_VIETNAM);
-		String countElementGetIndex = String.valueOf(countElementSize(driver, ManagerCustomersUI.ALL_ELEMENT_IS_VIETNAM));
-		System.out.println(countElementGetIndex);
-
+	public boolean getAllitemVietnam() {
+		getAllItemInColumn(driver, ManagerCustomersUI.ALL_ROW_VIETNAM, ManagerCustomersUI.ALL_COLUMN_VIETNAM, ManagerCustomersUI.ALL_COLUMNANDROW_VIETNAM);
+		return isElementDisplayed(driver, ManagerCustomersUI.ALL_COLUMNANDROW_VIETNAM);
 	}
 
 }

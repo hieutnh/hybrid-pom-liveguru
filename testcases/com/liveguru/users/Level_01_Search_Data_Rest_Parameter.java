@@ -46,8 +46,8 @@ public class Level_01_Search_Data_Rest_Parameter extends AbstractTest {
 //		managerCustomersPage.loadingDisable();
 //		managerCustomersPage.clickSearchDataButton("Reset Filter");
 //		managerCustomersPage.loadingDisable();
-
-
+//		managerCustomersPage.selectItemToListCountry("Country", "Vietnam");
+//		managerCustomersPage.clickSearchDataButton("Search");
 
 		Assert.assertTrue(managerCustomersPage.isDisplayData("Name", "taotest taotest1", "1"));
 		Assert.assertTrue(managerCustomersPage.isDisplayData("Email", "taotest1@gmail.com", "1"));
@@ -56,13 +56,15 @@ public class Level_01_Search_Data_Rest_Parameter extends AbstractTest {
 	}
 	
 	@Test
-	public void TC_02_Count_Element() {
+	public void TC_02() {
+		managerCustomersPage.clickSearchDataButton("Reset Filter");
+		managerCustomersPage.loadingDisable();
 		managerCustomersPage.selectItemToListCountry("Country", "Vietnam");
 		managerCustomersPage.clickSearchDataButton("Search");
-		managerCustomersPage.getSizeVietnam();
-		
+		managerCustomersPage.loadingDisable();
+		managerCustomersPage.getAllitemVietnam();
+
 	}
-	
 
 	@AfterClass
 	public void afterClass() {

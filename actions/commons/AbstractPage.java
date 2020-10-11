@@ -13,6 +13,7 @@ import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
 
 public class AbstractPage {
 
@@ -190,6 +191,19 @@ public class AbstractPage {
 				sleepInSecond(1);
 				break;
 			}
+		}
+	}
+	
+	//Get all items in a column
+	public void getAllItemInColumn(WebDriver driver, String locatorRow, String locatorColumn, String locatorRandC) {
+		List<WebElement> numerRows = getElements(driver, locatorRow);
+		int rowSize = numerRows.size();
+		System.out.println("row is" + rowSize);
+		List<WebElement> numberColumn = getElements(driver, locatorColumn);
+		int columnSize = numberColumn.size();
+		System.out.println("column is" + columnSize);
+		for (int i = 1; i <= rowSize; i++) {
+			getElement(driver, locatorRandC);
 		}
 	}
 
@@ -435,7 +449,6 @@ public class AbstractPage {
 		explicitWait = new WebDriverWait(driver, GlobalConstants.LONG_TIMEOUT);
 		explicitWait.until(ExpectedConditions.elementToBeClickable(getByXpath(getDynamicLocator(locator, values))));
 	}
-	
 
 	private WebDriverWait explicitWait;
 	private JavascriptExecutor jsExecutor;
