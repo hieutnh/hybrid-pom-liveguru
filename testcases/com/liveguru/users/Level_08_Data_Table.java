@@ -1,27 +1,24 @@
 package com.liveguru.users;
 
-import static org.testng.Assert.assertTrue;
-
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
-import org.testng.annotations.Test;
 
 import commons.AbstractTest;
-import pageOjects.PageGeneratorManager;
-import pageOjects.loginPageObject;
-import pageOjects.managerCustomersObject;
+import pageObjects.PageGeneratorManager;
+import pageObjects.loginPageObject;
+import pageObjects.managerCustomersObject;
 
-public class Level_01_Search_Data_Rest_Parameter extends AbstractTest {
+public class Level_08_Data_Table extends AbstractTest {
 	WebDriver driver;
 
 	// run all browsers
-	@Parameters("Browser")
+	@Parameters({"Browser", "url"})
 	@BeforeClass
-	public void beforeClass(String BrowserName) {
-		driver = getBrowserDriver(BrowserName);
+	public void beforeClass(String BrowserName, String WebUrl) {
+		driver = getBrowserDriver(BrowserName, WebUrl);
 
 		loginPage = PageGeneratorManager.getLoginPage(driver);
 
@@ -29,13 +26,13 @@ public class Level_01_Search_Data_Rest_Parameter extends AbstractTest {
 
 		loginPage.inputPasswordTextBox("guru99com");
 
+		managerCustomersPage = PageGeneratorManager.getmanagerCustomersPage(driver);
 		managerCustomersPage = loginPage.clickLoginButton();
 
 		managerCustomersPage.clickToClosePopupIncoming();
 
 	}
 
-	
 	public void TC_01_Register() {
 
 		managerCustomersPage.inputManagerCustomerTableColumnName("Name", "taotest taotest1");
@@ -54,7 +51,6 @@ public class Level_01_Search_Data_Rest_Parameter extends AbstractTest {
 		Assert.assertTrue(managerCustomersPage.isDisplayData("Telephone", "1234 56789", "1"));
 		Assert.assertTrue(managerCustomersPage.isDisplayData("ZIP", "20000", "1"));
 	}
-	
 
 	@AfterClass
 	public void afterClass() {
