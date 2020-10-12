@@ -1,4 +1,4 @@
-package pageObjects;
+package pageObjects_liveguru;
 
 import java.util.List;
 
@@ -24,8 +24,8 @@ public class managerCustomersObject extends AbstractPage {
 	public void inputManagerCustomerTableColumnName(String locatorColumnName, String value) {
 		// get ra locator của column
 		waitToElementVisible(driver, ManagerCustomersUI.DYNAMIC_HEADER_COLUMNNAME, locatorColumnName);
-		// String.valueof chuyển h�?m int qua String
-		// xác định v�? trí index của locator mình muốn tìm trong column trên
+		// String.valueof chuyển h�?m int qua String
+		// xác định v�? trí index của locator mình muốn tìm trong column trên
 		String countElementGetIndex = String.valueOf(countElementSize(driver, ManagerCustomersUI.DYNAMIC_HEADER_COLUMNNAME, locatorColumnName) + 1);
 		waitToElementVisible(driver, ManagerCustomersUI.DYNAMIC_TEXTBOX_INDEX_COLUMNNAME, countElementGetIndex);
 		sendkeyToElement(driver, ManagerCustomersUI.DYNAMIC_TEXTBOX_INDEX_COLUMNNAME, value, countElementGetIndex);

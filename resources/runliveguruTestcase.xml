@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <suite name="Suite" parallel="false">
-
+	<parameter name="url" value="http://live.demoguru99.com/index.php/backendlogin/" />
 	<test name="Run on FireFox UI">
 		<parameter name="Browser" value="firefox_ui" />
 		<classes>

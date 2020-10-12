@@ -7,9 +7,9 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 
 import commons.AbstractTest;
-import pageObjects.PageGeneratorManager;
-import pageObjects.loginPageObject;
-import pageObjects.managerCustomersObject;
+import pageObjects_liveguru.PageGeneratorManager;
+import pageObjects_liveguru.loginPageObject;
+import pageObjects_liveguru.managerCustomersObject;
 
 public class Level_08_Data_Table extends AbstractTest {
 	WebDriver driver;

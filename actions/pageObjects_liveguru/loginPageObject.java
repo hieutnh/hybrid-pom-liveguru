@@ -1,4 +1,4 @@
-package pageObjects;
+package pageObjects_liveguru;
 
 import org.openqa.selenium.WebDriver;
 
@@ -24,7 +24,7 @@ public class loginPageObject extends AbstractPage {
 		sendkeyToElement(driver, LoginPageUI.PASSWORD_TEXTBOX, pass);
 	}
 
-	//có th�? mang qua AbstractPage nếu b�? lặp lại nhiều lần
+	//có th�? mang qua AbstractPage nếu b�? lặp lại nhiều lần
 	public managerCustomersObject clickLoginButton() {
 		waitToElementClickAble(driver, LoginPageUI.LOGIN_BUTTON);
 		clickToElement(driver, LoginPageUI.LOGIN_BUTTON);

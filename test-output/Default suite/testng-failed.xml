@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.liveguru.users.Level_01_Search_Data_Rest_Parameter">
+      <class name="com.liveguru.users.Level_09_Upload_Multiple">
         <methods>
-          <include name="afterClass"/>
-          <include name="TC_01_Register"/>
+          <include name="TC_02_Upload_Multiple_File_Per_Time"/>
           <include name="beforeClass"/>
+          <include name="TC_01_Upload_One_File_Per_Time"/>
+          <include name="afterClass"/>
         </methods>
-      </class> <!-- com.liveguru.users.Level_01_Search_Data_Rest_Parameter -->
+      </class> <!-- com.liveguru.users.Level_09_Upload_Multiple -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

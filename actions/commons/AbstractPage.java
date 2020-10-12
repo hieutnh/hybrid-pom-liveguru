@@ -3,6 +3,7 @@ package commons;
 import java.util.List;
 import java.util.Set;
 
+import org.apache.commons.exec.OS;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
@@ -14,6 +15,8 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
+
+import pageUIs.AbstractPageUI;
 
 public class AbstractPage {
 
@@ -363,6 +366,42 @@ public class AbstractPage {
 		jsExecutor.executeScript("arguments[0].scrollIntoView(true);", element);
 	}
 
+	public String getDirectorySlash(String folderName) {
+		if (isMac() || isUnix() || isSolaris()) {
+			folderName = "/" + folderName + "/";
+		} else {
+			folderName = "\\" + folderName + "\\";
+		}
+		return folderName;
+	}
+
+	public boolean isWindows() {
+		return (osName.toLowerCase().indexOf("win") >= 0);
+	}
+
+	public boolean isMac() {
+		return (osName.toLowerCase().indexOf("mac") >= 0);
+	}
+
+	public boolean isUnix() {
+		return (osName.toLowerCase().indexOf("nix") >= 0 || osName.toLowerCase().indexOf("nux") >= 0 || osName.toLowerCase().indexOf("aix") > 0);
+	}
+
+	public boolean isSolaris() {
+		return (osName.toLowerCase().indexOf("sunos") >= 0);
+	}
+
+	public void uploadMultipleFiles(WebDriver driver, String... fileNames) {
+		String filePath = System.getProperty("user.dir") + getDirectorySlash("UploadFiles");
+
+		String fullFileName = "";
+		for (String file : fileNames) {
+			fullFileName = fullFileName + filePath + file + "\n";
+		}
+		fullFileName = fullFileName.trim();
+		sendkeyToElement(driver, AbstractPageUI.UPLOAD_FILE_TYPE, fullFileName);
+	}
+	
 	public void sendkeyToElementByJS(WebDriver driver, String locator, String value) {
 		jsExecutor = (JavascriptExecutor) driver;
 		element = getElement(driver, locator);
@@ -456,5 +495,6 @@ public class AbstractPage {
 	private Actions action;
 	private List<WebElement> elements;
 	private Select select;
+	private String osName = System.getProperty("os.name");
 
 }

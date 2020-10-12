@@ -1,4 +1,4 @@
-package pageObjects;
+package pageObjects_liveguru;
 
 import org.openqa.selenium.WebDriver;
 
@@ -12,7 +12,4 @@ public class PageGeneratorManager {
 		return new managerCustomersObject(driver);
 	}
 
-	public static UploadPageObject getUploadPageObject(WebDriver driver) {
-		return new UploadPageObject(driver);
-	}
 }

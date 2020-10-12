@@ -9,9 +9,27 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="7">Suite</th></tr>
-<tr><td><a href="#t0">Run on FireFox UI</a></td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">4</td><td></td><td></td></tr>
+<tr><td><a href="#t0">Run on FireFox UI</a></td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">5,243</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4" class="invisible"/></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Run on FireFox UI &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">com.liveguru.users.Level_09_Upload_Multiple</td><td><a href="#m0">TC_02_Upload_Multiple_File_Per_Time</a></td><td rowspan="1">1602502220217</td><td rowspan="1">35</td></tr></tbody>
 </table>
-<h2>Run on FireFox UI</h2></body>
+<h2>Run on FireFox UI</h2><h3 id="m0">com.liveguru.users.Level_09_Upload_Multiple#TC_02_Upload_Multiple_File_Per_Time</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.ElementNotInteractableException: Element &lt;input name=&quot;files[]&quot; type=&quot;file&quot;&gt; could not be scrolled into view
+Build info: version: &apos;3.9.1&apos;, revision: &apos;63f7b50&apos;, time: &apos;2018-02-07T22:42:28.403Z&apos;
+System info: host: &apos;DESKTOP-ACFHNHV&apos;, ip: &apos;192.168.1.90&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_261&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 81.0.1, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20200930150533, moz:geckodriverVersion: 0.27.0, moz:headless: false, moz:processID: 3848, moz:profile: C:\Users\Administrator\AppD..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 72b28d14-70da-46b7-8833-8a81d13e0f6b
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:160)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:601)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:279)
+	at org.openqa.selenium.remote.RemoteWebElement.clear(RemoteWebElement.java:118)
+	at commons.AbstractPage.sendkeyToElement(AbstractPage.java:142)
+	at commons.AbstractPage.uploadMultipleFiles(AbstractPage.java:402)
+	at com.liveguru.users.Level_09_Upload_Multiple.TC_02_Upload_Multiple_File_Per_Time(Level_09_Upload_Multiple.java:52)
+... Removed 29 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+</body>
 </html>

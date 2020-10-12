@@ -1,6 +1,7 @@
 eclipse.preferences.version=1
 encoding//actions/commons/AbstractPage.java=UTF-8
 encoding//actions/commons/AbstractTest.java=UTF-8
-encoding//actions/pageObjects/loginPageObject.java=UTF-8
-encoding//actions/pageObjects/managerCustomersObject.java=UTF-8
+encoding//actions/pageObjects_liveguru/loginPageObject.java=UTF-8
+encoding//actions/pageObjects_liveguru/managerCustomersObject.java=UTF-8
 encoding//testcases/com/liveguru/users/Level_08_Data_Table.java=UTF-8
+encoding//testcases/com/liveguru/users/Level_09_Upload_Multiple.java=UTF-8
