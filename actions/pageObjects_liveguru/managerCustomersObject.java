@@ -1,7 +1,5 @@
 package pageObjects_liveguru;
 
-import java.util.List;
-
 import org.openqa.selenium.WebDriver;
 
 import commons.AbstractPage;

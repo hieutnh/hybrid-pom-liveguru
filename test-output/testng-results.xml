@@ -2,12 +2,12 @@
 <testng-results skipped="0" failed="1" ignored="0" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="5243" started-at="2020-10-12T11:30:15Z" finished-at="2020-10-12T11:30:20Z">
+  <suite name="Suite" duration-ms="6563" started-at="2020-10-13T02:51:51Z" finished-at="2020-10-13T02:51:58Z">
     <groups>
     </groups>
-    <test name="Run on FireFox UI" duration-ms="5243" started-at="2020-10-12T11:30:15Z" finished-at="2020-10-12T11:30:20Z">
+    <test name="Run on FireFox UI" duration-ms="6563" started-at="2020-10-13T02:51:51Z" finished-at="2020-10-13T02:51:58Z">
       <class name="com.liveguru.users.Level_09_Upload_Multiple">
-        <test-method status="PASS" signature="beforeClass(java.lang.String, java.lang.String)[pri:0, instance:com.liveguru.users.Level_09_Upload_Multiple@15d0c81b]" name="beforeClass" is-config="true" duration-ms="4714" started-at="2020-10-12T11:30:15Z" finished-at="2020-10-12T11:30:20Z">
+        <test-method status="PASS" signature="beforeClass(java.lang.String, java.lang.String)[pri:0, instance:com.liveguru.users.Level_09_Upload_Multiple@15d0c81b]" name="beforeClass" is-config="true" duration-ms="6049" started-at="2020-10-13T02:51:51Z" finished-at="2020-10-13T02:51:57Z">
           <params>
             <param index="0">
               <value>
@@ -23,23 +23,23 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeClass -->
-        <test-method status="FAIL" signature="TC_02_Upload_Multiple_File_Per_Time()[pri:0, instance:com.liveguru.users.Level_09_Upload_Multiple@15d0c81b]" name="TC_02_Upload_Multiple_File_Per_Time" duration-ms="35" started-at="2020-10-12T11:30:20Z" finished-at="2020-10-12T11:30:20Z">
+        <test-method status="FAIL" signature="TC_02_Upload_Multiple_File_Per_Time()[pri:0, instance:com.liveguru.users.Level_09_Upload_Multiple@15d0c81b]" name="TC_02_Upload_Multiple_File_Per_Time" duration-ms="36" started-at="2020-10-13T02:51:57Z" finished-at="2020-10-13T02:51:57Z">
           <exception class="org.openqa.selenium.ElementNotInteractableException">
             <message>
               <![CDATA[Element <input name="files[]" type="file"> could not be scrolled into view
 Build info: version: '3.9.1', revision: '63f7b50', time: '2018-02-07T22:42:28.403Z'
 System info: host: 'DESKTOP-ACFHNHV', ip: '192.168.1.90', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_261'
 Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 81.0.1, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20200930150533, moz:geckodriverVersion: 0.27.0, moz:headless: false, moz:processID: 3848, moz:profile: C:\Users\Administrator\AppD..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 72b28d14-70da-46b7-8833-8a81d13e0f6b]]>
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 81.0.1, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20200930150533, moz:geckodriverVersion: 0.27.0, moz:headless: false, moz:processID: 12988, moz:profile: C:\Users\Administrator\AppD..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 5379ac5d-ea79-4997-a1ea-74ce2c7269d9]]>
             </message>
             <full-stacktrace>
               <![CDATA[org.openqa.selenium.ElementNotInteractableException: Element <input name="files[]" type="file"> could not be scrolled into view
 Build info: version: '3.9.1', revision: '63f7b50', time: '2018-02-07T22:42:28.403Z'
 System info: host: 'DESKTOP-ACFHNHV', ip: '192.168.1.90', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_261'
 Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 81.0.1, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20200930150533, moz:geckodriverVersion: 0.27.0, moz:headless: false, moz:processID: 3848, moz:profile: C:\Users\Administrator\AppD..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 72b28d14-70da-46b7-8833-8a81d13e0f6b
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 81.0.1, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20200930150533, moz:geckodriverVersion: 0.27.0, moz:headless: false, moz:processID: 12988, moz:profile: C:\Users\Administrator\AppD..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 5379ac5d-ea79-4997-a1ea-74ce2c7269d9
 at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
 at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
@@ -52,8 +52,8 @@ at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverComman
 at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:601)
 at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:279)
 at org.openqa.selenium.remote.RemoteWebElement.clear(RemoteWebElement.java:118)
-at commons.AbstractPage.sendkeyToElement(AbstractPage.java:142)
-at commons.AbstractPage.uploadMultipleFiles(AbstractPage.java:402)
+at commons.AbstractPage.sendkeyToElement(AbstractPage.java:140)
+at commons.AbstractPage.uploadMultipleFiles(AbstractPage.java:400)
 at com.liveguru.users.Level_09_Upload_Multiple.TC_02_Upload_Multiple_File_Per_Time(Level_09_Upload_Multiple.java:52)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
@@ -86,7 +86,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC_02_Upload_Multiple_File_Per_Time -->
-        <test-method status="PASS" signature="afterClass()[pri:0, instance:com.liveguru.users.Level_09_Upload_Multiple@15d0c81b]" name="afterClass" is-config="true" duration-ms="474" started-at="2020-10-12T11:30:20Z" finished-at="2020-10-12T11:30:20Z">
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:com.liveguru.users.Level_09_Upload_Multiple@15d0c81b]" name="afterClass" is-config="true" duration-ms="459" started-at="2020-10-13T02:51:57Z" finished-at="2020-10-13T02:51:58Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->

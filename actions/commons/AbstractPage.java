@@ -3,7 +3,6 @@ package commons;
 import java.util.List;
 import java.util.Set;
 
-import org.apache.commons.exec.OS;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
@@ -14,7 +13,6 @@ import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.Assert;
 
 import pageUIs.AbstractPageUI;
 
@@ -146,13 +144,13 @@ public class AbstractPage {
 		element.sendKeys(value);
 	}
 
-	public void sendkeyToElement(WebDriver driver, String locator, String value, String... values) {
+	public void sendkeyToElement(WebDriver driver, String locator, String... values) {
 		element = getElement(driver, getDynamicLocator(locator, values));
 		element.clear();
 		if (driver.toString().toLowerCase().contains("chrome") || driver.toString().toLowerCase().contains("edge")) {
 			sleepInMiliSecond(500);
 		}
-		element.sendKeys(value);
+		element.sendKeys(values);
 	}
 
 	public void selectItemInDropdown(WebDriver driver, String locator, String itemValue) {
