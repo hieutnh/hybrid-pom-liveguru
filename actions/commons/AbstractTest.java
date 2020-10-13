@@ -17,7 +17,7 @@ public class AbstractTest {
 	private WebDriver driver;
 	String sourceFolder = System.getProperty("user.dir");
 
-	protected WebDriver getBrowserDriver(String BrowserName, String WebUrl) {
+	protected WebDriver getBrowserDriver(String BrowserName, String appUrl) {
 
 		if (BrowserName.equalsIgnoreCase("firefox_ui")) {
 			WebDriverManager.firefoxdriver().setup();
@@ -49,11 +49,8 @@ public class AbstractTest {
 			throw new RuntimeException("Please input valid browser name");
 		}
 
-		if (WebUrl.equalsIgnoreCase("http://blueimp.github.io/jQuery-File-Upload/")) {
-			driver.get("http://blueimp.github.io/jQuery-File-Upload/");
-		} else {
-			driver.get("http://live.demoguru99.com/index.php/backendlogin/");
-		}
+		
+		driver.get(appUrl);
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		driver.manage().window().maximize();
 		return driver;

@@ -2,6 +2,7 @@ package commons;
 
 import java.util.List;
 import java.util.Set;
+import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
@@ -144,13 +145,13 @@ public class AbstractPage {
 		element.sendKeys(value);
 	}
 
-	public void sendkeyToElement(WebDriver driver, String locator, String... values) {
+	public void sendkeyToElement(WebDriver driver, String locator, String value, String... values) {
 		element = getElement(driver, getDynamicLocator(locator, values));
 		element.clear();
 		if (driver.toString().toLowerCase().contains("chrome") || driver.toString().toLowerCase().contains("edge")) {
 			sleepInMiliSecond(500);
 		}
-		element.sendKeys(values);
+		element.sendKeys(value);
 	}
 
 	public void selectItemInDropdown(WebDriver driver, String locator, String itemValue) {
@@ -194,8 +195,8 @@ public class AbstractPage {
 			}
 		}
 	}
-	
-	//Get all items in a column
+
+	// Get all items in a column
 	public void getAllItemInColumn(WebDriver driver, String locatorRow, String locatorColumn, String locatorRandC) {
 		List<WebElement> numerRows = getElements(driver, locatorRow);
 		int rowSize = numerRows.size();
@@ -264,6 +265,44 @@ public class AbstractPage {
 	public boolean isElementDisplayed(WebDriver driver, String locator, String... values) {
 		element = getElement(driver, getDynamicLocator(locator, values));
 		return element.isDisplayed();
+	}
+	
+	public void overrideGlobalTimeout(WebDriver driver, long timeInSecond) {
+		driver.manage().timeouts().implicitlyWait(timeInSecond, TimeUnit.SECONDS);
+	}
+	
+	public boolean isElementUndisplayed(WebDriver driver, String locator) {
+		overrideGlobalTimeout(driver, GlobalConstants.SHORT_TIMEOUT);
+		elements = getElements(driver, locator);
+		overrideGlobalTimeout(driver, GlobalConstants.LONG_TIMEOUT);
+		if (elements.size() == 0) {
+			System.out.println("Element not in DOM");
+			return true;
+		}else if(elements.size() > 0 && elements.get(0).isDisplayed()) {
+			System.out.println("Element in DOM but not visible/display");
+			return true;
+		}else {
+			System.out.println("Element in DOM and visible/display");
+			return false;
+		}
+		
+	}
+	
+	public boolean isElementUndisplayed(WebDriver driver, String locator, String... values) {
+		overrideGlobalTimeout(driver, GlobalConstants.SHORT_TIMEOUT);
+		elements = getElements(driver, getDynamicLocator(locator, values));
+		overrideGlobalTimeout(driver, GlobalConstants.LONG_TIMEOUT);
+		if (elements.size() == 0) {
+			System.out.println("Element not in DOM");
+			return true;
+		}else if(elements.size() > 0 && elements.get(0).isDisplayed()) {
+			System.out.println("Element in DOM but not visible/display");
+			return true;
+		}else {
+			System.out.println("Element in DOM and visible/display");
+			return false;
+		}
+			
 	}
 
 	public boolean isElementEnabled(WebDriver driver, String locator) {
@@ -397,9 +436,10 @@ public class AbstractPage {
 			fullFileName = fullFileName + filePath + file + "\n";
 		}
 		fullFileName = fullFileName.trim();
-		sendkeyToElement(driver, AbstractPageUI.UPLOAD_FILE_TYPE, fullFileName);
+		getElement(driver, AbstractPageUI.UPLOAD_FILE_TYPE).sendKeys(fullFileName);
+		
 	}
-	
+
 	public void sendkeyToElementByJS(WebDriver driver, String locator, String value) {
 		jsExecutor = (JavascriptExecutor) driver;
 		element = getElement(driver, locator);

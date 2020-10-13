@@ -19,6 +19,7 @@ public class UploadPageObject extends AbstractPage {
 
 	public void clickToStartUpload(String filename) {
 		waitToElementClickAble(driver, UploadFile.DYNAMIC_START_BUTTON, filename);
+		clickToElement(driver, UploadFile.DYNAMIC_START_BUTTON, filename);
 		
 	}
 

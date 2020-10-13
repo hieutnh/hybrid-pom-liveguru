@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [Suite]">
-  <parameter name="url" value="http://blueimp.github.io/jQuery-File-Upload/"/>
+  <parameter name="url" value="http://live.demoguru99.com/"/>
   <test thread-count="5" name="Run on FireFox UI(failed)">
     <parameter name="Browser" value="firefox_ui"/>
     <classes>
-      <class name="com.liveguru.users.Level_09_Upload_Multiple">
+      <class name="com.liveguru.users.Level_10_Element_Undisplay">
         <methods>
-          <include name="TC_02_Upload_Multiple_File_Per_Time"/>
-          <include name="beforeClass"/>
+          <include name="TC_01_Upload_One_File_Per_Time"/>
           <include name="afterClass"/>
+          <include name="beforeClass"/>
         </methods>
-      </class> <!-- com.liveguru.users.Level_09_Upload_Multiple -->
+      </class> <!-- com.liveguru.users.Level_10_Element_Undisplay -->
     </classes>
   </test> <!-- Run on FireFox UI(failed) -->
 </suite> <!-- Failed suite [Suite] -->

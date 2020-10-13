@@ -5,10 +5,11 @@ import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
+import org.testng.annotations.Test;
 
 import commons.AbstractTest;
 import pageObjects_liveguru.PageGeneratorManager;
-import pageObjects_liveguru.loginPageObject;
+import pageObjects_liveguru.loginDatatablePageObject;
 import pageObjects_liveguru.managerCustomersObject;
 
 public class Level_08_Data_Table extends AbstractTest {
@@ -17,10 +18,10 @@ public class Level_08_Data_Table extends AbstractTest {
 	// run all browsers
 	@Parameters({"Browser", "url"})
 	@BeforeClass
-	public void beforeClass(String BrowserName, String WebUrl) {
-		driver = getBrowserDriver(BrowserName, WebUrl);
+	public void beforeClass(String BrowserName, String appUrl) {
+		driver = getBrowserDriver(BrowserName, appUrl);
 
-		loginPage = PageGeneratorManager.getLoginPage(driver);
+		loginPage = PageGeneratorManager.getLoginDataTablePage(driver);
 
 		loginPage.inputUserNameTextBox("user01");
 
@@ -33,6 +34,7 @@ public class Level_08_Data_Table extends AbstractTest {
 
 	}
 
+	@Test
 	public void TC_01_Register() {
 
 		managerCustomersPage.inputManagerCustomerTableColumnName("Name", "taotest taotest1");
@@ -57,7 +59,7 @@ public class Level_08_Data_Table extends AbstractTest {
 		driver.quit();
 	}
 
-	private loginPageObject loginPage;
+	private loginDatatablePageObject loginPage;
 	private managerCustomersObject managerCustomersPage;
 
 }
