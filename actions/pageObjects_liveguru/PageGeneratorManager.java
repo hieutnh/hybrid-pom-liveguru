@@ -15,5 +15,9 @@ public class PageGeneratorManager {
 	public static loginUndisplayPageObject getLoginUndisplayPage(WebDriver driver) {
 		return new loginUndisplayPageObject(driver);
 	}
+	
+	public static tvPageObject getTvPage(WebDriver driver) {
+		return new tvPageObject(driver);
+	}
 
 }

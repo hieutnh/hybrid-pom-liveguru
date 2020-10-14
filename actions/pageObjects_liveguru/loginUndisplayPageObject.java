@@ -28,19 +28,29 @@ public class loginUndisplayPageObject extends AbstractPage {
 	}
 
 	public boolean isErrorMessageUndisplaySubscribe() {
-		return isElementUndisplayed(driver, LoginPageUndisplayUI.ERROR_MESSAGE_TEXTBOX_SUBSCRIBE);		
+		return isElementUndisplayed(driver, LoginPageUndisplayUI.ERROR_MESSAGE_TEXTBOX_SUBSCRIBE);
 	}
 
 	public void clickSubscribe() {
 		waitToElementClickAble(driver, LoginPageUndisplayUI.SUBSCRIBE_BUTTON);
-		clickToElement(driver, LoginPageUndisplayUI.SUBSCRIBE_BUTTON);		
+		clickToElement(driver, LoginPageUndisplayUI.SUBSCRIBE_BUTTON);
 	}
 
 	public boolean isErrorMessageDisplaySubscribe() {
 		waitToElementVisible(driver, LoginPageUndisplayUI.ERROR_MESSAGE_TEXTBOX_SUBSCRIBE);
-		return isElementDisplayed(driver, LoginPageUndisplayUI.ERROR_MESSAGE_TEXTBOX_SUBSCRIBE);		
+		return isElementDisplayed(driver, LoginPageUndisplayUI.ERROR_MESSAGE_TEXTBOX_SUBSCRIBE);
 	}
 
+	public String getTextErrorMessageSubscribe() {
+		waitToElementVisible(driver, LoginPageUndisplayUI.ERROR_MESSAGE_TEXTBOX_SUBSCRIBE);
+		return getElement(driver, LoginPageUndisplayUI.ERROR_MESSAGE_TEXTBOX_SUBSCRIBE).getText();
 
+	}
+
+	public tvPageObject clickToTV() {
+		waitToElementClickAble(driver, LoginPageUndisplayUI.TV_BUTTON);
+		clickToElement(driver, LoginPageUndisplayUI.TV_BUTTON);
+		return PageGeneratorManager.getTvPage(driver);
+	}
 
 }

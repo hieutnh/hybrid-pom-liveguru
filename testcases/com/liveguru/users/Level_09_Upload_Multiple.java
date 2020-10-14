@@ -35,16 +35,22 @@ public class Level_09_Upload_Multiple extends AbstractTest {
 
 		uploadPage.uploadMultipleFiles(driver, imageName02);
 		uploadPage.sleepInSecond(2);
-////		Assert.assertTrue(uploadPage.isFileLoaded(imageName02));
-////		uploadPage.clickToStartUpload(imageName02);
-////		Assert.assertTrue(uploadPage.isFileUploadSuccess(imageName02));
-//		
+		Assert.assertTrue(uploadPage.isFileLoaded(imageName02));
+		uploadPage.clickToStartUpload(imageName02);
+		Assert.assertTrue(uploadPage.isFileUploadSuccess(imageName02));
+		
 		uploadPage.uploadMultipleFiles(driver, imageName03);
 		uploadPage.sleepInSecond(2);
 		Assert.assertTrue(uploadPage.isFileLoaded(imageName02));
 		uploadPage.clickToStartUpload(imageName02);
 		Assert.assertTrue(uploadPage.isFileUploadSuccess(imageName02));
 
+	}
+	
+	@Test
+	public void TC_01_Upload_Multiple_file_Per_Time() {
+		uploadPage.uploadMultipleFiles(driver, imageName01, imageName02, imageName03);
+		
 	}
 
 

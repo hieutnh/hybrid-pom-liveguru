@@ -1,7 +1,6 @@
 package com.liveguru.users;
 
 import org.openqa.selenium.WebDriver;
-import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
@@ -10,8 +9,9 @@ import org.testng.annotations.Test;
 import commons.AbstractTest;
 import pageObjects_liveguru.PageGeneratorManager;
 import pageObjects_liveguru.loginUndisplayPageObject;
+import pageObjects_liveguru.tvPageObject;
 
-public class Level_10_Element_Undisplay extends AbstractTest {
+public class Level_11_Verify_Assert extends AbstractTest {
 	WebDriver driver;
 
 	@Parameters({ "Browser", "url" })
@@ -23,12 +23,20 @@ public class Level_10_Element_Undisplay extends AbstractTest {
 
 	@Test
 	public void TC_01_Check_Undisplay() {
-		Assert.assertTrue(loginUndisplayPage.isMyAccountUndisplay());
+		
+		verifyTrue(loginUndisplayPage.isMyAccountUndisplay());
 		loginUndisplayPage.clickToAccount();
-		Assert.assertTrue(loginUndisplayPage.isMyAccountDisplay());
-		Assert.assertTrue(loginUndisplayPage.isErrorMessageUndisplaySubscribe());
+		verifyTrue(loginUndisplayPage.isMyAccountDisplay());
+		//Step fail test verify custom
+		verifyTrue(loginUndisplayPage.isErrorMessageUndisplaySubscribe());
 		loginUndisplayPage.clickSubscribe();
-		Assert.assertTrue(loginUndisplayPage.isErrorMessageDisplaySubscribe());
+		String errorMessageSubscribe = loginUndisplayPage.getTextErrorMessageSubscribe();
+		System.out.println(errorMessageSubscribe);
+		verifyTrue(loginUndisplayPage.isErrorMessageDisplaySubscribe());
+		verifyEquals(errorMessageSubscribe, "THIS IS A REQUIRED FIELD");
+		tvPage = loginUndisplayPage.clickToTV();
+		
+		
 		
 	}
 
@@ -39,5 +47,6 @@ public class Level_10_Element_Undisplay extends AbstractTest {
 	}
 
 	private loginUndisplayPageObject loginUndisplayPage;
+	private tvPageObject tvPage;
 
 }

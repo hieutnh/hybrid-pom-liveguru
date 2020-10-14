@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+<testng-results skipped="0" failed="1" ignored="0" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="17224" started-at="2020-10-13T09:16:16Z" finished-at="2020-10-13T09:16:33Z">
+  <suite name="Suite" duration-ms="27958" started-at="2020-10-14T09:22:58Z" finished-at="2020-10-14T09:23:26Z">
     <groups>
     </groups>
-    <test name="Run on FireFox UI" duration-ms="17224" started-at="2020-10-13T09:16:16Z" finished-at="2020-10-13T09:16:33Z">
-      <class name="com.liveguru.users.Level_10_Element_Undisplay">
-        <test-method status="PASS" signature="beforeClass(java.lang.String, java.lang.String)[pri:0, instance:com.liveguru.users.Level_10_Element_Undisplay@675d3402]" name="beforeClass" is-config="true" duration-ms="6054" started-at="2020-10-13T09:16:16Z" finished-at="2020-10-13T09:16:22Z">
+    <test name="Run on FireFox UI" duration-ms="27958" started-at="2020-10-14T09:22:58Z" finished-at="2020-10-14T09:23:26Z">
+      <class name="com.liveguru.users.Level_11_Verify_Assert">
+        <test-method status="PASS" signature="beforeClass(java.lang.String, java.lang.String)[pri:0, instance:com.liveguru.users.Level_11_Verify_Assert@2667f029]" name="beforeClass" is-config="true" duration-ms="11655" started-at="2020-10-14T09:22:58Z" finished-at="2020-10-14T09:23:09Z">
           <params>
             <param index="0">
               <value>
@@ -23,15 +23,57 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeClass -->
-        <test-method status="PASS" signature="TC_01_Upload_One_File_Per_Time()[pri:0, instance:com.liveguru.users.Level_10_Element_Undisplay@675d3402]" name="TC_01_Upload_One_File_Per_Time" duration-ms="10692" started-at="2020-10-13T09:16:22Z" finished-at="2020-10-13T09:16:33Z">
+        <test-method status="FAIL" signature="TC_01_Check_Undisplay()[pri:0, instance:com.liveguru.users.Level_11_Verify_Assert@2667f029]" name="TC_01_Check_Undisplay" duration-ms="15823" started-at="2020-10-14T09:23:09Z" finished-at="2020-10-14T09:23:25Z">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [THIS IS A REQUIRED FIELD] but found [THIS IS A REQUIRED FIELD.]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [THIS IS A REQUIRED FIELD] but found [THIS IS A REQUIRED FIELD.]
+at org.testng.Assert.fail(Assert.java:96)
+at org.testng.Assert.failNotEquals(Assert.java:776)
+at org.testng.Assert.assertEqualsImpl(Assert.java:137)
+at org.testng.Assert.assertEquals(Assert.java:118)
+at org.testng.Assert.assertEquals(Assert.java:442)
+at commons.AbstractTest.checkEquals(AbstractTest.java:108)
+at commons.AbstractTest.verifyEquals(AbstractTest.java:120)
+at com.liveguru.users.Level_11_Verify_Assert.TC_01_Check_Undisplay(Level_11_Verify_Assert.java:36)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TC_01_Upload_One_File_Per_Time -->
-        <test-method status="PASS" signature="afterClass()[pri:0, instance:com.liveguru.users.Level_10_Element_Undisplay@675d3402]" name="afterClass" is-config="true" duration-ms="469" started-at="2020-10-13T09:16:33Z" finished-at="2020-10-13T09:16:33Z">
+        </test-method> <!-- TC_01_Check_Undisplay -->
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:com.liveguru.users.Level_11_Verify_Assert@2667f029]" name="afterClass" is-config="true" duration-ms="459" started-at="2020-10-14T09:23:25Z" finished-at="2020-10-14T09:23:26Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->
-      </class> <!-- com.liveguru.users.Level_10_Element_Undisplay -->
+      </class> <!-- com.liveguru.users.Level_11_Verify_Assert -->
     </test> <!-- Run on FireFox UI -->
   </suite> <!-- Suite -->
 </testng-results>
