@@ -35,7 +35,7 @@ public class Level_08_Data_Table extends AbstractTest {
 	}
 
 	@Test
-	public void TC_01_Register() {
+	public void TC_01_Data_Table() {
 
 		managerCustomersPage.inputManagerCustomerTableColumnName("Name", "taotest taotest1");
 		managerCustomersPage.inputManagerCustomerTableColumnName("Email", "taotest1@gmail.com");

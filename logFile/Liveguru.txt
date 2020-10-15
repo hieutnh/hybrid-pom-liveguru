@@ -1,0 +1,4 @@
+2020-10-15 15:51:20,890 INFO  com.liveguru.users.Level_12_Apply_Log_Report_HTML - Data_Table - Step 01: Input to all fiels on table column
+2020-10-15 15:51:21,196 INFO  com.liveguru.users.Level_12_Apply_Log_Report_HTML - Data_Table - Step 02: Click button search data
+2020-10-15 15:51:21,449 INFO  com.liveguru.users.Level_12_Apply_Log_Report_HTML - Data_Table - Step 03: Verify data after search
+2020-10-15 15:51:21,819 INFO  com.liveguru.users.Level_12_Apply_Log_Report_HTML -  -------------------------- FAILED -------------------------- 

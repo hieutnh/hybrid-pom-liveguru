@@ -1,0 +1,47 @@
+2020-10-15 12:01:53,695 INFO  com.liveguru.users.Level_12_Apply_Log_Report_HTML - Data_Table - Step 01: Input to all fiels on table column
+2020-10-15 12:01:54,008 INFO  com.liveguru.users.Level_12_Apply_Log_Report_HTML - Data_Table - Step 02: Click button search data
+2020-10-15 12:01:54,251 INFO  com.liveguru.users.Level_12_Apply_Log_Report_HTML - Data_Table - Step 03: Verify data after search
+2020-10-15 12:13:13,411 INFO  com.liveguru.users.Level_12_Apply_Log_Report_HTML - Data_Table - Step 01: Input to all fiels on table column
+2020-10-15 12:13:13,726 INFO  com.liveguru.users.Level_12_Apply_Log_Report_HTML - Data_Table - Step 02: Click button search data
+2020-10-15 12:13:13,968 INFO  com.liveguru.users.Level_12_Apply_Log_Report_HTML - Data_Table - Step 03: Verify data after search
+2020-10-15 12:13:56,522 INFO  com.liveguru.users.Level_12_Apply_Log_Report_HTML - Data_Table - Step 01: Input to all fiels on table column
+2020-10-15 12:13:56,804 INFO  com.liveguru.users.Level_12_Apply_Log_Report_HTML - Data_Table - Step 02: Click button search data
+2020-10-15 12:13:57,044 INFO  com.liveguru.users.Level_12_Apply_Log_Report_HTML - Data_Table - Step 03: Verify data after search
+2020-10-15 13:36:47,889 INFO  com.liveguru.users.Level_12_Apply_Log_Report_HTML - Data_Table - Step 01: Input to all fiels on table column
+2020-10-15 13:36:48,205 INFO  com.liveguru.users.Level_12_Apply_Log_Report_HTML - Data_Table - Step 02: Click button search data
+2020-10-15 13:36:48,452 INFO  com.liveguru.users.Level_12_Apply_Log_Report_HTML - Data_Table - Step 03: Verify data after search
+2020-10-15 13:40:00,085 INFO  com.liveguru.users.Level_12_Apply_Log_Report_HTML - Data_Table - Step 01: Input to all fiels on table column
+2020-10-15 13:40:00,419 INFO  com.liveguru.users.Level_12_Apply_Log_Report_HTML - Data_Table - Step 02: Click button search data
+2020-10-15 13:40:00,671 INFO  com.liveguru.users.Level_12_Apply_Log_Report_HTML - Data_Table - Step 03: Verify data after search
+2020-10-15 13:44:07,524 INFO  com.liveguru.users.Level_12_Apply_Log_Report_HTML - Data_Table - Step 01: Input to all fiels on table column
+2020-10-15 13:44:07,834 INFO  com.liveguru.users.Level_12_Apply_Log_Report_HTML - Data_Table - Step 02: Click button search data
+2020-10-15 13:44:08,078 INFO  com.liveguru.users.Level_12_Apply_Log_Report_HTML - Data_Table - Step 03: Verify data after search
+2020-10-15 14:59:57,842 INFO  com.liveguru.users.Level_12_Apply_Log_Report_HTML - Data_Table - Step 01: Input to all fiels on table column
+2020-10-15 14:59:58,135 INFO  com.liveguru.users.Level_12_Apply_Log_Report_HTML - Data_Table - Step 02: Click button search data
+2020-10-15 14:59:58,390 INFO  com.liveguru.users.Level_12_Apply_Log_Report_HTML - Data_Table - Step 03: Verify data after search
+2020-10-15 15:03:27,864 INFO  com.liveguru.users.Level_12_Apply_Log_Report_HTML - Data_Table - Step 01: Input to all fiels on table column
+2020-10-15 15:03:28,151 INFO  com.liveguru.users.Level_12_Apply_Log_Report_HTML - Data_Table - Step 02: Click button search data
+2020-10-15 15:03:28,394 INFO  com.liveguru.users.Level_12_Apply_Log_Report_HTML - Data_Table - Step 03: Verify data after search
+2020-10-15 15:19:01,941 INFO  com.liveguru.users.Level_12_Apply_Log_Report_HTML - Data_Table - Step 01: Input to all fiels on table column
+2020-10-15 15:19:02,210 INFO  com.liveguru.users.Level_12_Apply_Log_Report_HTML - Data_Table - Step 02: Click button search data
+2020-10-15 15:19:02,447 INFO  com.liveguru.users.Level_12_Apply_Log_Report_HTML - Data_Table - Step 03: Verify data after search
+2020-10-15 15:23:05,953 INFO  com.liveguru.users.Level_12_Apply_Log_Report_HTML - Data_Table - Step 01: Input to all fiels on table column
+2020-10-15 15:23:06,349 INFO  com.liveguru.users.Level_12_Apply_Log_Report_HTML - Data_Table - Step 02: Click button search data
+2020-10-15 15:23:06,589 INFO  com.liveguru.users.Level_12_Apply_Log_Report_HTML - Data_Table - Step 03: Verify data after search
+2020-10-15 15:23:06,980 INFO  com.liveguru.users.Level_12_Apply_Log_Report_HTML -  -------------------------- FAILED -------------------------- 
+2020-10-15 15:25:26,948 INFO  com.liveguru.users.Level_12_Apply_Log_Report_HTML - Data_Table - Step 01: Input to all fiels on table column
+2020-10-15 15:25:27,234 INFO  com.liveguru.users.Level_12_Apply_Log_Report_HTML - Data_Table - Step 02: Click button search data
+2020-10-15 15:25:27,477 INFO  com.liveguru.users.Level_12_Apply_Log_Report_HTML - Data_Table - Step 03: Verify data after search
+2020-10-15 15:25:27,838 INFO  com.liveguru.users.Level_12_Apply_Log_Report_HTML -  -------------------------- FAILED -------------------------- 
+2020-10-15 15:37:51,832 INFO  com.liveguru.users.Level_12_Apply_Log_Report_HTML - Data_Table - Step 01: Input to all fiels on table column
+2020-10-15 15:37:52,109 INFO  com.liveguru.users.Level_12_Apply_Log_Report_HTML - Data_Table - Step 02: Click button search data
+2020-10-15 15:37:52,352 INFO  com.liveguru.users.Level_12_Apply_Log_Report_HTML - Data_Table - Step 03: Verify data after search
+2020-10-15 15:37:52,738 INFO  com.liveguru.users.Level_12_Apply_Log_Report_HTML -  -------------------------- FAILED -------------------------- 
+2020-10-15 15:51:01,908 INFO  com.liveguru.users.Level_12_Apply_Log_Report_HTML - Data_Table - Step 01: Input to all fiels on table column
+2020-10-15 15:51:02,220 INFO  com.liveguru.users.Level_12_Apply_Log_Report_HTML - Data_Table - Step 02: Click button search data
+2020-10-15 15:51:02,461 INFO  com.liveguru.users.Level_12_Apply_Log_Report_HTML - Data_Table - Step 03: Verify data after search
+2020-10-15 15:51:02,847 INFO  com.liveguru.users.Level_12_Apply_Log_Report_HTML -  -------------------------- FAILED -------------------------- 
+2020-10-15 15:51:20,890 INFO  com.liveguru.users.Level_12_Apply_Log_Report_HTML - Data_Table - Step 01: Input to all fiels on table column
+2020-10-15 15:51:21,196 INFO  com.liveguru.users.Level_12_Apply_Log_Report_HTML - Data_Table - Step 02: Click button search data
+2020-10-15 15:51:21,449 INFO  com.liveguru.users.Level_12_Apply_Log_Report_HTML - Data_Table - Step 03: Verify data after search
+2020-10-15 15:51:21,819 INFO  com.liveguru.users.Level_12_Apply_Log_Report_HTML -  -------------------------- FAILED -------------------------- 
