@@ -21,7 +21,7 @@ public class AbstractTest {
 	protected final Log log;
 
 	protected AbstractTest() {
-	log = LogFactory.getLog(getClass());
+		log = LogFactory.getLog(getClass());
 	}
 
 	protected static WebDriver driver;
@@ -60,6 +60,7 @@ public class AbstractTest {
 		}
 
 		driver.get(appUrl);
+		
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		driver.manage().window().maximize();
 		return driver;

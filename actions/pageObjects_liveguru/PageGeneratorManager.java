@@ -19,5 +19,33 @@ public class PageGeneratorManager {
 	public static tvPageObject getTvPage(WebDriver driver) {
 		return new tvPageObject(driver);
 	}
+	
+	public static home13PageObject getHomePage13(WebDriver driver) {
+		return new home13PageObject(driver);
+	}
+	
+	public static myDashBoard13PageObject getmyDashBoardPage13(WebDriver driver) {
+		return new myDashBoard13PageObject(driver);
+	}
+	
+	public static register13PageObject getregisterPage13(WebDriver driver) {
+		return new register13PageObject(driver);
+	}
+	
+	public static myOrders13PageObject getMyOrderPage13(WebDriver driver) {
+		return new myOrders13PageObject(driver);
+	}
+	
+	public static myWishlist13PageObject getMyWishlist13Page(WebDriver driver) {
+		return new myWishlist13PageObject(driver);
+	}
+	
+	public static addressBook13PageObject getAddressBook13Page(WebDriver driver) {
+		return new addressBook13PageObject(driver);
+	}
+
+	public static myApplications13PageObject getmyApplications13Page(WebDriver driver) {
+		return new myApplications13PageObject(driver);
+	}
 
 }

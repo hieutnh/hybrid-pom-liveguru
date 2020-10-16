@@ -31,7 +31,7 @@ public class Level_12_Apply_Log_Report_HTML extends AbstractTest {
 		managerCustomersPage = loginPage.clickLoginButton();
 
 		managerCustomersPage.clickToClosePopupIncoming();
-
+		
 	}
 
 	@Test

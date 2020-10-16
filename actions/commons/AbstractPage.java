@@ -266,11 +266,11 @@ public class AbstractPage {
 		element = getElement(driver, getDynamicLocator(locator, values));
 		return element.isDisplayed();
 	}
-	
+
 	public void overrideGlobalTimeout(WebDriver driver, long timeInSecond) {
 		driver.manage().timeouts().implicitlyWait(timeInSecond, TimeUnit.SECONDS);
 	}
-	
+
 	public boolean isElementUndisplayed(WebDriver driver, String locator) {
 		overrideGlobalTimeout(driver, GlobalConstants.SHORT_TIMEOUT);
 		elements = getElements(driver, locator);
@@ -278,16 +278,16 @@ public class AbstractPage {
 		if (elements.size() == 0) {
 			System.out.println("Element not in DOM");
 			return true;
-		}else if(elements.size() > 0 && elements.get(0).isDisplayed()) {
+		} else if (elements.size() > 0 && elements.get(0).isDisplayed()) {
 			System.out.println("Element in DOM but not visible/display");
 			return true;
-		}else {
+		} else {
 			System.out.println("Element in DOM and visible/display");
 			return false;
 		}
-		
+
 	}
-	
+
 	public boolean isElementUndisplayed(WebDriver driver, String locator, String... values) {
 		overrideGlobalTimeout(driver, GlobalConstants.SHORT_TIMEOUT);
 		elements = getElements(driver, getDynamicLocator(locator, values));
@@ -295,14 +295,14 @@ public class AbstractPage {
 		if (elements.size() == 0) {
 			System.out.println("Element not in DOM");
 			return true;
-		}else if(elements.size() > 0 && elements.get(0).isDisplayed()) {
+		} else if (elements.size() > 0 && elements.get(0).isDisplayed()) {
 			System.out.println("Element in DOM but not visible/display");
 			return true;
-		}else {
+		} else {
 			System.out.println("Element in DOM and visible/display");
 			return false;
 		}
-			
+
 	}
 
 	public boolean isElementEnabled(WebDriver driver, String locator) {
@@ -437,7 +437,7 @@ public class AbstractPage {
 		}
 		fullFileName = fullFileName.trim();
 		getElement(driver, AbstractPageUI.UPLOAD_FILE_TYPE).sendKeys(fullFileName);
-		
+
 	}
 
 	public void sendkeyToElementByJS(WebDriver driver, String locator, String value) {
@@ -525,6 +525,12 @@ public class AbstractPage {
 	public void waitToElementClickAble(WebDriver driver, String locator, String... values) {
 		explicitWait = new WebDriverWait(driver, GlobalConstants.LONG_TIMEOUT);
 		explicitWait.until(ExpectedConditions.elementToBeClickable(getByXpath(getDynamicLocator(locator, values))));
+	}
+
+	// Witch page myDashBoard13
+	public void clickToAllLinkMyDashBoard13(WebDriver driver, String listvalues) {
+		waitToElementClickAble(driver, AbstractPageUI.DYNAMIC_MY_ACCOUNT_LINK, listvalues);
+		clickToElement(driver, AbstractPageUI.DYNAMIC_MY_ACCOUNT_LINK, listvalues);
 	}
 
 	private WebDriverWait explicitWait;
