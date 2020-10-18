@@ -56,16 +56,16 @@ public class Level_13_Share_Class_state extends AbstractTest {
 	public void TC_02_MyDashBoard() {
 		myDashBoard13Page = register13Page.clickRegisterButton();
 
-		myDashBoard13Page.clickToAllLinkMyDashBoard13(driver, "3");
+		myDashBoard13Page.clickToAllLinkMyDashBoard13(driver, "Address Book");
 		addressBook13Page = PageGeneratorManager.getAddressBook13Page(driver);
 
-		addressBook13Page.clickToAllLinkMyDashBoard13(driver, "4");
+		addressBook13Page.clickToAllLinkMyDashBoard13(driver, "My Orders");
 		myOrders13Page = PageGeneratorManager.getMyOrderPage13(driver);
 
-		myOrders13Page.clickToAllLinkMyDashBoard13(driver, "8");
+		myOrders13Page.clickToAllLinkMyDashBoard13(driver, "My Wishlist");
 		myWishlist13Page = PageGeneratorManager.getMyWishlist13Page(driver);
 		
-		myWishlist13Page.clickToAllLinkMyDashBoard13(driver, "9");
+		myWishlist13Page.clickToAllLinkMyDashBoard13(driver, "My Applications");
 		myDashBoard13Page = PageGeneratorManager.getmyDashBoardPage13(driver);
 
 	}

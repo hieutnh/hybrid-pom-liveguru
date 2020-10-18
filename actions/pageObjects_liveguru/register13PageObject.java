@@ -39,6 +39,8 @@ public class register13PageObject extends AbstractPage {
 	}
 
 	public myDashBoard13PageObject clickRegisterButton() {
+		waitToElementClickAble(driver, Register13PageUI.REGISTER_BUTTON);
+		clickToElement(driver, Register13PageUI.REGISTER_BUTTON);
 		return PageGeneratorManager.getmyDashBoardPage13(driver);
 	}
 

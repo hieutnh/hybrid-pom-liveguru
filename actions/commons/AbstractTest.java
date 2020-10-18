@@ -64,6 +64,12 @@ public class AbstractTest {
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		driver.manage().window().maximize();
 		return driver;
+		
+		
+		
+		private void setDriver(WedDriver driver) {
+			threadLocal.set(driver);
+		}
 	}
 
 	private boolean checkTrue(boolean condition) {

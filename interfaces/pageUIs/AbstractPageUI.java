@@ -10,5 +10,5 @@ public class AbstractPageUI {
 	
 	
 	//Locator của level 13
-	public static final String DYNAMIC_MY_ACCOUNT_LINK = "//div[@class='block-content']//li[%s]";
+	public static final String DYNAMIC_MY_ACCOUNT_LINK = "//div[@class='block-content']//a[contains(text(),'%s')]";
 }

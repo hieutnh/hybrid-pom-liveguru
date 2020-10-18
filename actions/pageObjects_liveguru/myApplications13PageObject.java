@@ -12,12 +12,4 @@ public class myApplications13PageObject extends AbstractPage {
 		this.driver = driver;
 	}
 
-	public register13PageObject clickRegisterHeader() {
-		return PageGeneratorManager.getregisterPage13(driver);
-	}
-
-	public void clickAccountHeader() {
-		
-	}
-
 }
