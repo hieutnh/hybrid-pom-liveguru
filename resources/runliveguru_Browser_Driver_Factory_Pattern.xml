@@ -15,19 +15,20 @@
 		<listener class-name="org.uncommons.reportng.HTMLReporter"/>
 		<listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
 	</listeners>
-	<test name="Run on FireFox UI">
-		<parameter name="Browser" value="firefox_ui" />
+<!-- 	<test name="Run on FireFox UI"> -->
+<!-- 		<parameter name="Browser" value="firefox_ui" /> -->
+<!-- 		<classes> -->
+<!-- 			<class name="com.liveguru.users.Level_13_Share_Class_state" /> -->
+<!-- 		</classes> -->
+<!-- 	</test> -->
+
+
+	<test name="Run on Chrome UI">
+		<parameter name="Browser" value="chrome_ui" />
 		<classes>
-			<class name="com.liveguru.users.Level_13_Share_Class_state" />
+			<class name="com.liveguru.users.Level_13_Browser_Driver_Factory_Pattern" />
 		</classes>
 	</test>
-
-	<!-- <test name="Run on Chrome UI"> -->
-	<!-- <parameter name="Browser" value="chrome_ui" /> -->
-	<!-- <classes> -->
-	<!-- <class name="com.nopcommerce.users.Level_04_Register_Login_Multiple_Browser" /> -->
-	<!-- </classes> -->
-	<!-- </test> -->
 
 	<!-- <test name="Run on Firefox HEADLESS"> -->
 	<!-- <parameter name="Browser" value="firefox_headless" /> -->

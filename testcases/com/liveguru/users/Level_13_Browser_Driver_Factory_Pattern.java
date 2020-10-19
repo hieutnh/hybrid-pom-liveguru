@@ -8,6 +8,8 @@ import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import commons.AbstractTest;
+import driverFactory.DriverFactory;
+import driverFactory.DriverManager;
 import pageObjects_liveguru.PageGeneratorManager;
 import pageObjects_liveguru.addressBook13PageObject;
 import pageObjects_liveguru.home13PageObject;
@@ -17,8 +19,9 @@ import pageObjects_liveguru.myOrders13PageObject;
 import pageObjects_liveguru.myWishlist13PageObject;
 import pageObjects_liveguru.register13PageObject;
 
-public class Level_13_Share_Class_state extends AbstractTest {
+public class Level_13_Browser_Driver_Factory_Pattern extends AbstractTest {
 	WebDriver driver;
+	DriverManager driverManager;
 	Select select;
 	String email, pass, confirmpass, Ten, Ho, tendem;
 
@@ -26,7 +29,8 @@ public class Level_13_Share_Class_state extends AbstractTest {
 	@Parameters({ "Browser", "url" })
 	@BeforeClass
 	public void beforeClass(String BrowserName, String appUrl) {
-		driver = getBrowserDriver(BrowserName, appUrl);
+		driverManager = DriverFactory.getBrowserDriver(BrowserName);
+		driver = driverManager.getDriver(appUrl);
 
 		Ten = "Hoang";
 		Ho = "Khoi";
@@ -39,10 +43,14 @@ public class Level_13_Share_Class_state extends AbstractTest {
 
 	@Test
 	public void TC_01_Register() {
+		log.info("Register - Step 01: Open home page");
 		homePage = PageGeneratorManager.getHomePage13(driver);
+		log.info("Register - Step 02: Click Accont Header");
 		homePage.clickAccountHeader();
+		log.info("Register - Step 03: Click register Header");
 		register13Page = homePage.clickRegisterHeader();
 
+		log.info("Register - Step 04: Input all field request to register");
 		register13Page.inputAllFielsRegister(Ten, "firstname");
 		register13Page.inputAllFielsRegister(tendem, "middlename");
 		register13Page.inputAllFielsRegister(Ho, "lastname");
@@ -54,17 +62,22 @@ public class Level_13_Share_Class_state extends AbstractTest {
 
 	@Test
 	public void TC_02_MyDashBoard() {
+		log.info("Register - Step 05: Click button register");
 		myDashBoard13Page = register13Page.clickRegisterButton();
-
+		
+		log.info("MyDashBoard - Step 01: Click Address Book button");
 		myDashBoard13Page.clickToAllLinkMyDashBoard13(driver, "Address Book");
 		addressBook13Page = PageGeneratorManager.getAddressBook13Page(driver);
 
+		log.info("MyDashBoard - Step 02: Click My Orders button");
 		addressBook13Page.clickToAllLinkMyDashBoard13(driver, "My Orders");
 		myOrders13Page = PageGeneratorManager.getMyOrderPage13(driver);
 
+		log.info("MyDashBoard - Step 03: Click My Wishlist button");
 		myOrders13Page.clickToAllLinkMyDashBoard13(driver, "My Wishlist");
 		myWishlist13Page = PageGeneratorManager.getMyWishlist13Page(driver);
 		
+		log.info("MyDashBoard - Step 04: Click My Applications button");
 		myWishlist13Page.clickToAllLinkMyDashBoard13(driver, "My Applications");
 		myDashBoard13Page = PageGeneratorManager.getmyDashBoardPage13(driver);
 

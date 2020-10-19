@@ -28,7 +28,6 @@ public class AbstractTest {
 	String sourceFolder = System.getProperty("user.dir");
 
 	protected WebDriver getBrowserDriver(String BrowserName, String appUrl) {
-
 		if (BrowserName.equalsIgnoreCase("firefox_ui")) {
 			WebDriverManager.firefoxdriver().setup();
 			driver = new FirefoxDriver();
@@ -67,9 +66,9 @@ public class AbstractTest {
 		
 		
 		
-		private void setDriver(WedDriver driver) {
-			threadLocal.set(driver);
-		}
+//		private void setDriver(WedDriver driver) {
+//			threadLocal.set(driver);
+//		}
 	}
 
 	private boolean checkTrue(boolean condition) {
