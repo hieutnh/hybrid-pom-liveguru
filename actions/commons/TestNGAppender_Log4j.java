@@ -4,7 +4,7 @@ import org.apache.log4j.AppenderSkeleton;
 import org.apache.log4j.spi.LoggingEvent;
 import org.testng.Reporter;
 
-public class TestNGAppender extends AppenderSkeleton {
+public class TestNGAppender_Log4j extends AppenderSkeleton {
 
 	@Override
 	protected void append(LoggingEvent event) {
