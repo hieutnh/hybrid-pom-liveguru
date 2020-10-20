@@ -18,6 +18,7 @@ import org.testng.Reporter;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class AbstractTest {
+	protected static ThreadLocal<WebDriver> threadLocalDriver = new ThreadLocal<WebDriver>();
 	protected final Log log;
 
 	protected AbstractTest() {
@@ -30,46 +31,53 @@ public class AbstractTest {
 	protected WebDriver getBrowserDriver(String BrowserName, String appUrl) {
 		if (BrowserName.equalsIgnoreCase("firefox_ui")) {
 			WebDriverManager.firefoxdriver().setup();
-			driver = new FirefoxDriver();
+			setDriver(new FirefoxDriver());
 		} else if (BrowserName.equalsIgnoreCase("chrome_ui")) {
 			WebDriverManager.chromedriver().setup();
 			ChromeOptions options = new ChromeOptions();
 			// dissable infobars chrome
 			options.setExperimentalOption("excludeSwitches", Collections.singletonList("enable-automation"));
 			options.setExperimentalOption("useAutomationExtension", false);
-			driver = new ChromeDriver(options);
+			setDriver(new ChromeDriver(options));
 		} else if (BrowserName.equalsIgnoreCase("firefox_headless")) {
 			WebDriverManager.firefoxdriver().setup();
 			// chạy firefox headless
 			FirefoxOptions options = new FirefoxOptions();
 			options.setHeadless(true);
-			driver = new FirefoxDriver(options);
+			setDriver(new FirefoxDriver(options));
 		} else if (BrowserName.equalsIgnoreCase("chrome_headless")) {
 			WebDriverManager.chromedriver().setup();
 			// chạy chrome headless
 			ChromeOptions options = new ChromeOptions();
 			options.addArguments("headless");
 			options.addArguments("window-size=1366x768");
-			driver = new ChromeDriver(options);
+			setDriver(new ChromeDriver(options));
 		} else if (BrowserName.equalsIgnoreCase("edge_chromium")) {
 			WebDriverManager.edgedriver().setup();
-			driver = new EdgeDriver();
+			setDriver(new EdgeDriver());
 		} else {
 			throw new RuntimeException("Please input valid browser name");
 		}
 
-		driver.get(appUrl);
+		getDriver().get(appUrl);
 		
-		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-		driver.manage().window().maximize();
-		return driver;
-		
-		
-		
-//		private void setDriver(WedDriver driver) {
-//			threadLocal.set(driver);
-//		}
+		getDriver().manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		getDriver().manage().window().maximize();
+		return getDriver();
 	}
+		protected void removeDriver() {
+			getDriver().quit();
+			threadLocalDriver.remove();
+		}
+		
+		private WebDriver getDriver() {
+			return threadLocalDriver.get();
+		}
+		
+		private void setDriver(WebDriver driver) {
+			threadLocalDriver.set(driver);
+		}
+	
 
 	private boolean checkTrue(boolean condition) {
 		boolean pass = true;

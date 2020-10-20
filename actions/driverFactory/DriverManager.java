@@ -3,6 +3,7 @@ package driverFactory;
 import org.openqa.selenium.WebDriver;
 
 public abstract class DriverManager {
+//	protected static ThreadLocal<WebDriver> threadLocalDriver = new ThreadLocal<WebDriver>();
 	protected WebDriver driver;
 
 	protected abstract void createDriver();
@@ -21,5 +22,4 @@ public abstract class DriverManager {
 			driver = null;
 		}
 	}
-
 }

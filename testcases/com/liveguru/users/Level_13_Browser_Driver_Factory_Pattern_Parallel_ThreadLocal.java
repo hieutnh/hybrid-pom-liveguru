@@ -19,8 +19,8 @@ import pageObjects_liveguru.myOrders13PageObject;
 import pageObjects_liveguru.myWishlist13PageObject;
 import pageObjects_liveguru.register13PageObject;
 
-public class Level_13_Browser_Driver_Factory_Pattern extends AbstractTest {
-	WebDriver driver;
+public class Level_13_Browser_Driver_Factory_Pattern_Parallel_ThreadLocal extends AbstractTest {
+	private	WebDriver driver;
 	DriverManager driverManager;
 	Select select;
 	String email, pass, confirmpass, Ten, Ho, tendem;

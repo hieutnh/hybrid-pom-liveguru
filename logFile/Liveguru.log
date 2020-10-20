@@ -63,3 +63,39 @@
 2020-10-19 18:05:06,363 INFO  com.liveguru.users.Level_13_Share_Class_state - MyDashBoard - Step 02: Click My Orders button
 2020-10-19 18:05:08,742 INFO  com.liveguru.users.Level_13_Share_Class_state - MyDashBoard - Step 03: Click My Wishlist button
 2020-10-19 18:05:11,152 INFO  com.liveguru.users.Level_13_Share_Class_state - MyDashBoard - Step 04: Click My Applications button
+2020-10-20 11:43:49,281 INFO  com.liveguru.users.Level_13_Browser_Driver_Factory_Pattern - Register - Step 01: Open home page
+2020-10-20 11:43:49,284 INFO  com.liveguru.users.Level_13_Browser_Driver_Factory_Pattern - Register - Step 02: Click Accont Header
+2020-10-20 11:43:49,427 INFO  com.liveguru.users.Level_13_Browser_Driver_Factory_Pattern - Register - Step 03: Click register Header
+2020-10-20 11:43:51,846 INFO  com.liveguru.users.Level_13_Browser_Driver_Factory_Pattern - Register - Step 04: Input all field request to register
+2020-10-20 11:43:55,503 INFO  com.liveguru.users.Level_13_Browser_Driver_Factory_Pattern - Register - Step 05: Click button register
+2020-10-20 11:43:58,654 INFO  com.liveguru.users.Level_13_Browser_Driver_Factory_Pattern - MyDashBoard - Step 01: Click Address Book button
+2020-10-20 11:44:01,455 INFO  com.liveguru.users.Level_13_Browser_Driver_Factory_Pattern - MyDashBoard - Step 02: Click My Orders button
+2020-10-20 11:44:04,132 INFO  com.liveguru.users.Level_13_Browser_Driver_Factory_Pattern - MyDashBoard - Step 03: Click My Wishlist button
+2020-10-20 11:44:06,593 INFO  com.liveguru.users.Level_13_Browser_Driver_Factory_Pattern - MyDashBoard - Step 04: Click My Applications button
+2020-10-20 11:47:09,802 INFO  com.liveguru.users.Level_13_Browser_Driver_Factory_Pattern - Register - Step 01: Open home page
+2020-10-20 11:47:09,804 INFO  com.liveguru.users.Level_13_Browser_Driver_Factory_Pattern - Register - Step 02: Click Accont Header
+2020-10-20 11:47:09,935 INFO  com.liveguru.users.Level_13_Browser_Driver_Factory_Pattern - Register - Step 03: Click register Header
+2020-10-20 11:47:12,330 INFO  com.liveguru.users.Level_13_Browser_Driver_Factory_Pattern - Register - Step 04: Input all field request to register
+2020-10-20 11:47:15,867 INFO  com.liveguru.users.Level_13_Browser_Driver_Factory_Pattern - Register - Step 05: Click button register
+2020-10-20 11:47:18,893 INFO  com.liveguru.users.Level_13_Browser_Driver_Factory_Pattern - MyDashBoard - Step 01: Click Address Book button
+2020-10-20 11:47:21,864 INFO  com.liveguru.users.Level_13_Browser_Driver_Factory_Pattern - MyDashBoard - Step 02: Click My Orders button
+2020-10-20 11:47:24,475 INFO  com.liveguru.users.Level_13_Browser_Driver_Factory_Pattern - MyDashBoard - Step 03: Click My Wishlist button
+2020-10-20 11:47:26,890 INFO  com.liveguru.users.Level_13_Browser_Driver_Factory_Pattern - MyDashBoard - Step 04: Click My Applications button
+2020-10-20 11:49:58,477 INFO  com.liveguru.users.Level_13_Browser_Driver_Factory_Pattern - Register - Step 01: Open home page
+2020-10-20 11:49:58,480 INFO  com.liveguru.users.Level_13_Browser_Driver_Factory_Pattern - Register - Step 02: Click Accont Header
+2020-10-20 11:49:58,805 INFO  com.liveguru.users.Level_13_Browser_Driver_Factory_Pattern - Register - Step 03: Click register Header
+2020-10-20 11:49:59,767 INFO  com.liveguru.users.Level_13_Browser_Driver_Factory_Pattern - Register - Step 01: Open home page
+2020-10-20 11:49:59,767 INFO  com.liveguru.users.Level_13_Browser_Driver_Factory_Pattern - Register - Step 02: Click Accont Header
+2020-10-20 11:49:59,848 INFO  com.liveguru.users.Level_13_Browser_Driver_Factory_Pattern - Register - Step 03: Click register Header
+2020-10-20 11:50:02,301 INFO  com.liveguru.users.Level_13_Browser_Driver_Factory_Pattern - Register - Step 04: Input all field request to register
+2020-10-20 11:50:03,495 INFO  com.liveguru.users.Level_13_Browser_Driver_Factory_Pattern - Register - Step 04: Input all field request to register
+2020-10-20 11:50:03,767 INFO  com.liveguru.users.Level_13_Browser_Driver_Factory_Pattern - Register - Step 05: Click button register
+2020-10-20 11:50:06,062 INFO  com.liveguru.users.Level_13_Browser_Driver_Factory_Pattern - Register - Step 05: Click button register
+2020-10-20 11:50:08,826 INFO  com.liveguru.users.Level_13_Browser_Driver_Factory_Pattern - MyDashBoard - Step 01: Click Address Book button
+2020-10-20 11:50:09,064 INFO  com.liveguru.users.Level_13_Browser_Driver_Factory_Pattern - MyDashBoard - Step 01: Click Address Book button
+2020-10-20 11:50:11,839 INFO  com.liveguru.users.Level_13_Browser_Driver_Factory_Pattern - MyDashBoard - Step 02: Click My Orders button
+2020-10-20 11:50:14,263 INFO  com.liveguru.users.Level_13_Browser_Driver_Factory_Pattern - MyDashBoard - Step 02: Click My Orders button
+2020-10-20 11:50:14,486 INFO  com.liveguru.users.Level_13_Browser_Driver_Factory_Pattern - MyDashBoard - Step 03: Click My Wishlist button
+2020-10-20 11:50:16,923 INFO  com.liveguru.users.Level_13_Browser_Driver_Factory_Pattern - MyDashBoard - Step 04: Click My Applications button
+2020-10-20 11:50:18,951 INFO  com.liveguru.users.Level_13_Browser_Driver_Factory_Pattern - MyDashBoard - Step 03: Click My Wishlist button
+2020-10-20 11:50:23,886 INFO  com.liveguru.users.Level_13_Browser_Driver_Factory_Pattern - MyDashBoard - Step 04: Click My Applications button
