@@ -11,12 +11,19 @@ public class ChromeDriverManager extends DriverManager {
 
 	@Override
 	protected void createDriver() {
+//		WebDriverManager.chromedriver().setup();
+//		ChromeOptions options = new ChromeOptions();
+//		// dissable infobars chrome
+//		options.setExperimentalOption("excludeSwitches", Collections.singletonList("enable-automation"));
+//		options.setExperimentalOption("useAutomationExtension", false);
+//		driver = new ChromeDriver(options);
+//	}
 		WebDriverManager.chromedriver().setup();
 		ChromeOptions options = new ChromeOptions();
 		// dissable infobars chrome
 		options.setExperimentalOption("excludeSwitches", Collections.singletonList("enable-automation"));
 		options.setExperimentalOption("useAutomationExtension", false);
-		driver = new ChromeDriver(options);
+		setDriver(new ChromeDriver(options));
 	}
 
 }

@@ -6,10 +6,15 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class FirefoxDriverManager extends DriverManager {
 
+//	@Override
+//	protected void createDriver() {
+//		WebDriverManager.firefoxdriver().setup();
+//		driver = new FirefoxDriver();
+//	}
 	@Override
 	protected void createDriver() {
 		WebDriverManager.firefoxdriver().setup();
-		driver = new FirefoxDriver();
+		setDriver(new FirefoxDriver());
 	}
 
 }

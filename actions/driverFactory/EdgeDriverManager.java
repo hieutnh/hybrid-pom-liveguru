@@ -7,9 +7,13 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 public class EdgeDriverManager extends DriverManager {
 
 	@Override
+//	protected void createDriver() {
+//		WebDriverManager.edgedriver().setup();
+//		driver = new EdgeDriver();
+//	}
 	protected void createDriver() {
 		WebDriverManager.edgedriver().setup();
-		driver = new EdgeDriver();
+		setDriver(new EdgeDriver());
 	}
 
 }

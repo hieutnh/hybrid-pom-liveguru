@@ -1,18 +1,1 @@
-2020-10-20 14:57:44,594 INFO  com.liveguru.users.Level_13_Browser_Driver_Factory_Pattern_Parallel_ThreadLocal - Register - Step 01: Open home page
-2020-10-20 14:57:44,596 INFO  com.liveguru.users.Level_13_Browser_Driver_Factory_Pattern_Parallel_ThreadLocal - Register - Step 02: Click Accont Header
-2020-10-20 14:57:44,701 INFO  com.liveguru.users.Level_13_Browser_Driver_Factory_Pattern_Parallel_ThreadLocal - Register - Step 03: Click register Header
-2020-10-20 14:57:47,112 INFO  com.liveguru.users.Level_13_Browser_Driver_Factory_Pattern_Parallel_ThreadLocal - Register - Step 04: Input all field request to register
-2020-10-20 14:57:48,034 INFO  com.liveguru.users.Level_13_Browser_Driver_Factory_Pattern_Parallel_ThreadLocal - Register - Step 01: Open home page
-2020-10-20 14:57:48,034 INFO  com.liveguru.users.Level_13_Browser_Driver_Factory_Pattern_Parallel_ThreadLocal - Register - Step 02: Click Accont Header
-2020-10-20 14:57:48,304 INFO  com.liveguru.users.Level_13_Browser_Driver_Factory_Pattern_Parallel_ThreadLocal - Register - Step 03: Click register Header
-2020-10-20 14:57:50,751 INFO  com.liveguru.users.Level_13_Browser_Driver_Factory_Pattern_Parallel_ThreadLocal - Register - Step 05: Click button register
-2020-10-20 14:57:53,004 INFO  com.liveguru.users.Level_13_Browser_Driver_Factory_Pattern_Parallel_ThreadLocal - Register - Step 04: Input all field request to register
-2020-10-20 14:57:53,275 INFO  com.liveguru.users.Level_13_Browser_Driver_Factory_Pattern_Parallel_ThreadLocal - Register - Step 05: Click button register
-2020-10-20 14:57:53,795 INFO  com.liveguru.users.Level_13_Browser_Driver_Factory_Pattern_Parallel_ThreadLocal - MyDashBoard - Step 01: Click Address Book button
-2020-10-20 14:57:56,628 INFO  com.liveguru.users.Level_13_Browser_Driver_Factory_Pattern_Parallel_ThreadLocal - MyDashBoard - Step 02: Click My Orders button
-2020-10-20 14:57:58,314 INFO  com.liveguru.users.Level_13_Browser_Driver_Factory_Pattern_Parallel_ThreadLocal - MyDashBoard - Step 01: Click Address Book button
-2020-10-20 14:57:59,241 INFO  com.liveguru.users.Level_13_Browser_Driver_Factory_Pattern_Parallel_ThreadLocal - MyDashBoard - Step 03: Click My Wishlist button
-2020-10-20 14:58:01,666 INFO  com.liveguru.users.Level_13_Browser_Driver_Factory_Pattern_Parallel_ThreadLocal - MyDashBoard - Step 04: Click My Applications button
-2020-10-20 14:58:03,291 INFO  com.liveguru.users.Level_13_Browser_Driver_Factory_Pattern_Parallel_ThreadLocal - MyDashBoard - Step 02: Click My Orders button
-2020-10-20 14:58:08,192 INFO  com.liveguru.users.Level_13_Browser_Driver_Factory_Pattern_Parallel_ThreadLocal - MyDashBoard - Step 03: Click My Wishlist button
-2020-10-20 14:58:12,887 INFO  com.liveguru.users.Level_13_Browser_Driver_Factory_Pattern_Parallel_ThreadLocal - MyDashBoard - Step 04: Click My Applications button
+2020-10-21 18:22:56,001 INFO  com.liveguru.users.Level_14_Share_Class_state - Register - Step 05: Click button register

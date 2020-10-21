@@ -60,24 +60,62 @@ public class AbstractTest {
 		}
 
 		getDriver().get(appUrl);
-		
+
 		getDriver().manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		getDriver().manage().window().maximize();
 		return getDriver();
 	}
-		protected void removeDriver() {
-			getDriver().quit();
-			threadLocalDriver.remove();
+
+	protected void removeDriver() {
+//		getDriver().quit();
+//		threadLocalDriver.remove();
+		try {
+			// get ra tên của OS và convert qua chữ thường
+			String osName = System.getProperty("os.name").toLowerCase();
+			log.info("OS name = " + osName);
+
+			// Khai báo 1 biến command line để thực thi
+			String cmd = "";
+			if (getDriver() != null) {
+				getDriver().quit();
+
+			}
+
+			if (getDriver().toString().toLowerCase().contains("chrome")) {
+				if (osName.toLowerCase().contains("mac")) {
+					cmd = "pkill chromedriver";
+				} else if (osName.toLowerCase().contains("windows")) {
+					cmd = "taskkill /F /FI \"IMAGENAME eq chromedriver*\"";
+				}
+			} else if (getDriver().toString().toLowerCase().contains("internetexplorer")) {
+				if (osName.toLowerCase().contains("window")) {
+					cmd = "taskkill /F /FI \"IMAGENAME eq IEDriverServer*\"";
+				}
+			} else if (getDriver().toString().toLowerCase().contains("firefox")) {
+				if (osName.toLowerCase().contains("mac")) {
+					cmd = "pkill geckodriver";
+				} else if (osName.toLowerCase().contains("windows")) {
+					cmd = "taskkill /F /FI \"IMAGENAME eq geckodriver*\"";
+				}
+			}
+
+			Process process = Runtime.getRuntime().exec(cmd);
+			process.waitFor();
+
+			log.info("---------- QUIT BROWSER SUCCESS ----------");
+		} catch (Exception e) {
+			log.info(e.getMessage());
 		}
-		
-		private WebDriver getDriver() {
-			return threadLocalDriver.get();
-		}
-		
-		private void setDriver(WebDriver driver) {
-			threadLocalDriver.set(driver);
-		}
-	
+		threadLocalDriver.remove();
+	}
+
+	private WebDriver getDriver() {
+		return threadLocalDriver.get();
+	}
+
+	private void setDriver(WebDriver driver) {
+		threadLocalDriver.set(driver);
+	}
 
 	private boolean checkTrue(boolean condition) {
 		boolean pass = true;
