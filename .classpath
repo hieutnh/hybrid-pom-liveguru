@@ -38,25 +38,5 @@
 	<classpathentry kind="lib" path="libExtentVersion4/jcommander-1.48.jar"/>
 	<classpathentry kind="lib" path="libExtentVersion4/mongodb-driver-3.3.0.jar"/>
 	<classpathentry kind="lib" path="libExtentVersion4/mongodb-driver-core-3.3.0.jar"/>
-	<classpathentry kind="lib" path="LibAllure/allure-java-commons-2.13.5.jar"/>
-	<classpathentry kind="lib" path="LibAllure/allure-model-2.13.5.jar"/>
-	<classpathentry kind="lib" path="LibAllure/allure-testng-2.13.5.jar"/>
-	<classpathentry kind="lib" path="LibAllure/aspectjlib-1.6.2.jar"/>
-	<classpathentry kind="lib" path="LibAllure/aspectjrt-1.8.10.jar"/>
-	<classpathentry kind="lib" path="LibAllure/aspectjtools-1.8.10.jar"/>
-	<classpathentry kind="lib" path="LibAllure/aspectjweaver-1.8.10.jar"/>
-	<classpathentry kind="lib" path="LibAllure/bsh-2.0b6.jar"/>
-	<classpathentry kind="lib" path="LibAllure/byte-buddy-1.8.15.jar"/>
-	<classpathentry kind="lib" path="LibAllure/commons-exec-1.3.jar"/>
-	<classpathentry kind="lib" path="LibAllure/guava-25.0-jre.jar"/>
-	<classpathentry kind="lib" path="LibAllure/jackson-annotations-2.9.0.jar"/>
-	<classpathentry kind="lib" path="LibAllure/jackson-core-2.9.8.jar"/>
-	<classpathentry kind="lib" path="LibAllure/jackson-databind-2.9.8.jar"/>
-	<classpathentry kind="lib" path="LibAllure/jcommander-1.72.jar"/>
-	<classpathentry kind="lib" path="LibAllure/joor-java-8-0.9.10.jar"/>
-	<classpathentry kind="lib" path="LibAllure/okhttp-3.11.0.jar"/>
-	<classpathentry kind="lib" path="LibAllure/okio-1.14.1.jar"/>
-	<classpathentry kind="lib" path="LibAllure/slf4j-api-1.7.30.jar"/>
-	<classpathentry kind="lib" path="LibAllure/tika-core-1.20.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
