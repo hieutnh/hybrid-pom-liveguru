@@ -109,7 +109,7 @@ public class AbstractTest {
 		threadLocalDriver.remove();
 	}
 
-	private WebDriver getDriver() {
+	public static WebDriver getDriver() {
 		return threadLocalDriver.get();
 	}
 

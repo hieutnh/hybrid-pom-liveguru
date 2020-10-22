@@ -24,4 +24,10 @@ public class home13PageObject extends AbstractPage {
 		clickToElement(driver, Home13PageUI.ACCOUNT_LINK);
 	}
 
+	public loginPageObject13 clickLoginButton() {
+		waitToElementClickAble(driver, Home13PageUI.LOGIN_LINK);
+		clickToElement(driver, Home13PageUI.LOGIN_LINK);
+		return PageGeneratorManager.getLoginPage13(driver);
+	}
+
 }

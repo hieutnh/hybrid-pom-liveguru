@@ -40,18 +40,49 @@ public abstract class DriverManager {
 		return getDriver();
 	}
 
-	//1 hàm của lib threadLocalDriver. xóa các luồng sau khi chạy xong browser giải phóng dữ liệu(ram)
+	// 1 hàm của lib threadLocalDriver. xóa các luồng sau khi chạy xong browser giải phóng dữ liệu(ram)
 	public void removeDriver() {
-		getDriver().quit();
+		try {
+			String osName = System.getProperty("os.name").toLowerCase();
+
+			String cmd = "";
+			if (getDriver() != null) {
+				getDriver().quit();
+
+			}
+
+			if (getDriver().toString().toLowerCase().contains("chrome")) {
+				if (osName.toLowerCase().contains("mac")) {
+					cmd = "pkill chromedriver";
+				} else if (osName.toLowerCase().contains("windows")) {
+					cmd = "taskkill /F /FI \"IMAGENAME eq chromedriver*\"";
+				}
+			} else if (getDriver().toString().toLowerCase().contains("internetexplorer")) {
+				if (osName.toLowerCase().contains("window")) {
+					cmd = "taskkill /F /FI \"IMAGENAME eq IEDriverServer*\"";
+				}
+			} else if (getDriver().toString().toLowerCase().contains("firefox")) {
+				if (osName.toLowerCase().contains("mac")) {
+					cmd = "pkill geckodriver";
+				} else if (osName.toLowerCase().contains("windows")) {
+					cmd = "taskkill /F /FI \"IMAGENAME eq geckodriver*\"";
+				}
+			}
+
+			Process process = Runtime.getRuntime().exec(cmd);
+			process.waitFor();
+
+		} catch (Exception e) {
+		}
 		threadLocalDriver.remove();
 	}
 
-	//thay thế hàm (driver.)
+	// thay thế hàm (driver.)
 	protected WebDriver getDriver() {
 		return threadLocalDriver.get();
 	}
 
-	//Thay thể hàm khởi tạo của driver (driver = new...)
+	// Thay thể hàm khởi tạo của driver (driver = new...)
 	protected void setDriver(WebDriver driver) {
 		threadLocalDriver.set(driver);
 	}

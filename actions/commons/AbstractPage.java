@@ -171,6 +171,12 @@ public class AbstractPage {
 		select = new Select(element);
 		return select.getFirstSelectedOption().getText();
 	}
+	
+	public String getSelectedItemInDropdown(WebDriver driver, String locator, String... values) {
+		element = getElement(driver, getDynamicLocator(locator, values));
+		select = new Select(element);
+		return select.getFirstSelectedOption().getText();
+	}
 
 	public boolean isMultiple(WebDriver driver, String locator) {
 		element = getElement(driver, locator);
@@ -230,8 +236,8 @@ public class AbstractPage {
 		return element.getAttribute(attributeName);
 	}
 
-	public String getElementText(WebDriver driver, String locator) {
-		element = getElement(driver, locator);
+	public String getElementText(WebDriver driver, String locator, String... values) {
+		element = getElement(driver, getDynamicLocator(locator, values));
 		return element.getText();
 	}
 
@@ -245,6 +251,13 @@ public class AbstractPage {
 
 	public void checkToCheckbox(WebDriver driver, String locator) {
 		element = getElement(driver, locator);
+		if (!element.isSelected()) {
+			element.click();
+		}
+	}
+	
+	public void checkToCheckbox(WebDriver driver, String locator, String... values) {
+		element = getElement(driver, getDynamicLocator(locator, values));
 		if (!element.isSelected()) {
 			element.click();
 		}
