@@ -1,5 +1,7 @@
 package commons;
 
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.Set;
 import java.util.concurrent.TimeUnit;
@@ -171,7 +173,7 @@ public class AbstractPage {
 		select = new Select(element);
 		return select.getFirstSelectedOption().getText();
 	}
-	
+
 	public String getSelectedItemInDropdown(WebDriver driver, String locator, String... values) {
 		element = getElement(driver, getDynamicLocator(locator, values));
 		select = new Select(element);
@@ -240,7 +242,7 @@ public class AbstractPage {
 		element = getElement(driver, locator);
 		return element.getText();
 	}
-	
+
 	public String getElementText(WebDriver driver, String locator, String... values) {
 		element = getElement(driver, getDynamicLocator(locator, values));
 		return element.getText();
@@ -260,7 +262,7 @@ public class AbstractPage {
 			element.click();
 		}
 	}
-	
+
 	public void checkToCheckbox(WebDriver driver, String locator, String... values) {
 		element = getElement(driver, getDynamicLocator(locator, values));
 		if (!element.isSelected()) {
@@ -519,6 +521,11 @@ public class AbstractPage {
 		explicitWait = new WebDriverWait(driver, GlobalConstants.LONG_TIMEOUT);
 		explicitWait.until(ExpectedConditions.visibilityOfElementLocated(getByXpath(locator)));
 	}
+	
+	public void waitToElementsVisible(WebDriver driver, String locator) {
+		explicitWait = new WebDriverWait(driver, GlobalConstants.LONG_TIMEOUT);
+		explicitWait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(getByXpath(locator)));
+	}
 
 	public void waitToElementVisible(WebDriver driver, String locator, String... values) {
 		explicitWait = new WebDriverWait(driver, GlobalConstants.LONG_TIMEOUT);
@@ -543,6 +550,59 @@ public class AbstractPage {
 	public void waitToElementClickAble(WebDriver driver, String locator, String... values) {
 		explicitWait = new WebDriverWait(driver, GlobalConstants.LONG_TIMEOUT);
 		explicitWait.until(ExpectedConditions.elementToBeClickable(getByXpath(getDynamicLocator(locator, values))));
+	}
+
+	public boolean isDataSortedAscending(WebDriver driver, String locator) {
+		ArrayList<String> arrayList = new ArrayList<>();
+		List<WebElement> elementList = getElements(driver, locator);
+		for (WebElement element : elementList) {
+			arrayList.add(element.getText());
+		}
+
+		System.out.println("------------------Data on UI ------------------");
+		for (String name : arrayList) {
+			System.out.println(name);
+		}
+		ArrayList<String> sortedList = new ArrayList<>();
+		for (String child : arrayList) {
+			sortedList.add(child);
+		}
+		Collections.sort(arrayList);
+		System.out.println("------------------Data sorted on code ------------------");
+		for (String name : arrayList) {
+			System.out.println(name);
+		}
+		return sortedList.equals(arrayList);
+	}
+
+	public boolean isDataSortedDescending(WebDriver driver, String locator) {
+		ArrayList<String> arrayList = new ArrayList<>();
+		List<WebElement> elementList = getElements(driver, locator);
+		for (WebElement element : elementList) {
+			arrayList.add(element.getText());
+		}
+		System.out.println("------------------Data on UI ------------------");
+		for (String name : arrayList) {
+			System.out.println(name);
+		}
+		ArrayList<String> sortedList = new ArrayList<>();
+		for (String child : arrayList) {
+			sortedList.add(child);
+		}
+		Collections.sort(arrayList);
+		System.out.println("------------------Data sorted ASC on code ------------------");
+		for (String name : arrayList) {
+			System.out.println(name);
+		}
+
+		Collections.reverse(arrayList);
+		System.out.println("------------------Data sorted DESC on code ------------------");
+		for (String name : arrayList) {
+			System.out.println(name);
+		}
+
+		return sortedList.equals(arrayList);
+
 	}
 
 	// Witch page myDashBoard13

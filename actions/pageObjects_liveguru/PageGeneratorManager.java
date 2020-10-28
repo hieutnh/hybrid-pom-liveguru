@@ -51,5 +51,9 @@ public class PageGeneratorManager {
 	public static loginPageObject13 getLoginPage13(WebDriver driver) {
 		return new loginPageObject13(driver);
 	}
+	
+	public static mobilePageObject getmobilePage(WebDriver driver) {
+		return new mobilePageObject(driver);
+	}
 
 }
