@@ -1,7 +1,10 @@
 package commons;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Date;
 import java.util.List;
 import java.util.Set;
 import java.util.concurrent.TimeUnit;
@@ -521,7 +524,7 @@ public class AbstractPage {
 		explicitWait = new WebDriverWait(driver, GlobalConstants.LONG_TIMEOUT);
 		explicitWait.until(ExpectedConditions.visibilityOfElementLocated(getByXpath(locator)));
 	}
-	
+
 	public void waitToElementsVisible(WebDriver driver, String locator) {
 		explicitWait = new WebDriverWait(driver, GlobalConstants.LONG_TIMEOUT);
 		explicitWait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(getByXpath(locator)));
@@ -570,6 +573,53 @@ public class AbstractPage {
 		Collections.sort(arrayList);
 		System.out.println("------------------Data sorted on code ------------------");
 		for (String name : arrayList) {
+			System.out.println(name);
+		}
+		return sortedList.equals(arrayList);
+	}
+
+	public boolean isPriceSortAscending(WebDriver driver, String locator) {
+		ArrayList<Float> arrayList = new ArrayList<Float>();
+		List<WebElement> elementList = getElements(driver, locator);
+		for (WebElement element : elementList) {
+			arrayList.add(Float.parseFloat(element.getText().replace("$", "").trim()));
+		}
+		
+		System.out.println("------------------Data on UI ------------------");
+		for (Float name : arrayList) {
+			System.out.println(name);
+		}
+		ArrayList<Float> sortedList = new ArrayList<>();
+		for (Float child : arrayList) {
+			sortedList.add(child);
+		}
+		Collections.sort(arrayList);
+		System.out.println("------------------Data sorted on code ------------------");
+		for (Float name : arrayList) {
+			System.out.println(name);
+		}
+		return sortedList.equals(arrayList);
+	}
+	
+	public boolean isDateSortAscending(WebDriver driver, String locator) throws ParseException {
+		ArrayList<Date> arrayList = new ArrayList<Date>();
+		List<WebElement> elementList = getElements(driver, locator);
+		for (WebElement element : elementList) {
+			SimpleDateFormat date = new SimpleDateFormat("dd/mm/yyyy");
+			arrayList.add(date.parse(element.getText()));
+		}
+
+		System.out.println("------------------Data on UI ------------------");
+		for (Date name : arrayList) {
+			System.out.println(name);
+		}
+		ArrayList<Date> sortedList = new ArrayList<>();
+		for (Date child : arrayList) {
+			sortedList.add(child);
+		}
+		Collections.sort(arrayList);
+		System.out.println("------------------Data sorted on code ------------------");
+		for (Date name : arrayList) {
 			System.out.println(name);
 		}
 		return sortedList.equals(arrayList);
