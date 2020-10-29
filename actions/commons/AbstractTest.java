@@ -14,6 +14,8 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
+import org.openqa.selenium.safari.SafariDriver;
+import org.openqa.selenium.safari.SafariOptions;
 import org.testng.Assert;
 import org.testng.Reporter;
 
@@ -41,6 +43,14 @@ public class AbstractTest {
 			options.setExperimentalOption("excludeSwitches", Collections.singletonList("enable-automation"));
 			options.setExperimentalOption("useAutomationExtension", false);
 			setDriver(new ChromeDriver(options));
+		} else if (BrowserName.equalsIgnoreCase("coccoc")) {
+			WebDriverManager.chromedriver().driverVersion("81.0.4044.138").setup();
+			ChromeOptions options = new ChromeOptions();
+			// dissable infobars chrome
+			options.setBinary("");
+			setDriver(new ChromeDriver(options));
+		} else if (BrowserName.equalsIgnoreCase("safari")) {
+			setDriver(new SafariDriver());
 		} else if (BrowserName.equalsIgnoreCase("firefox_headless")) {
 			WebDriverManager.firefoxdriver().setup();
 			// chạy firefox headless
