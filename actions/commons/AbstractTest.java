@@ -9,6 +9,7 @@ import org.apache.commons.logging.LogFactory;
 import org.joda.time.DateTime;
 import org.joda.time.DateTimeZone;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebDriver.Options;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
@@ -35,6 +36,13 @@ public class AbstractTest {
 	protected WebDriver getBrowserDriver(String BrowserName, String appUrl) {
 		if (BrowserName.equalsIgnoreCase("firefox_ui")) {
 			WebDriverManager.firefoxdriver().setup();
+			FirefoxOptions options = new FirefoxOptions();
+			//downloadfile
+			options.addPreference("browser.download.folderList", 2);
+			options.addPreference("browser.download.dir", GlobalConstants.DOWNLOAD_FOLDER);
+			options.addPreference("browser.download.userDownloadDir", true);
+			options.addPreference("browser.helperApps.neverAsk.saveToDisk", "application/pfd");
+			options.addPreference("pdfjs.disabled", true);
 			setDriver(new FirefoxDriver());
 		} else if (BrowserName.equalsIgnoreCase("chrome_ui")) {
 			WebDriverManager.chromedriver().setup();
