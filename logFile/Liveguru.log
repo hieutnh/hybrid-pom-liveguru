@@ -452,3 +452,9 @@
 2020-10-29 15:03:55,878 INFO  com.liveguru.users.Level_13_Browser_Driver_Factory_Pattern_Parallel_ThreadLocal - MyDashBoard - Step 02: Click My Orders button
 2020-10-29 15:04:00,524 INFO  com.liveguru.users.Level_13_Browser_Driver_Factory_Pattern_Parallel_ThreadLocal - MyDashBoard - Step 03: Click My Wishlist button
 2020-10-29 15:04:05,443 INFO  com.liveguru.users.Level_13_Browser_Driver_Factory_Pattern_Parallel_ThreadLocal - MyDashBoard - Step 04: Click My Applications button
+2020-11-01 11:47:13,092 INFO  com.liveguru.users.Level_16_Data_Generate_1 - OS name = windows 10
+2020-11-01 11:47:14,149 INFO  com.liveguru.users.Level_16_Data_Generate_1 - ---------- QUIT BROWSER SUCCESS ----------
+2020-11-01 13:38:02,404 INFO  com.liveguru.users.Level_16_Data_Generate_2 - OS name = windows 10
+2020-11-01 13:38:03,029 INFO  com.liveguru.users.Level_16_Data_Generate_2 - ---------- QUIT BROWSER SUCCESS ----------
+2020-11-01 14:21:52,911 INFO  com.liveguru.users.Level_16_Data_Generate_3_Export_File - OS name = windows 10
+2020-11-01 14:21:53,576 INFO  com.liveguru.users.Level_16_Data_Generate_3_Export_File - ---------- QUIT BROWSER SUCCESS ----------

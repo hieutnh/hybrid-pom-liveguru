@@ -1,6 +1,7 @@
 package commons;
 
 import java.util.Collections;
+import java.util.HashMap;
 import java.util.Random;
 import java.util.concurrent.TimeUnit;
 
@@ -50,6 +51,13 @@ public class AbstractTest {
 			// dissable infobars chrome
 			options.setExperimentalOption("excludeSwitches", Collections.singletonList("enable-automation"));
 			options.setExperimentalOption("useAutomationExtension", false);
+			
+			//download file
+			HashMap<String, Object> chromePrefs = new HashMap<String, Object>();
+			chromePrefs.put("profile.default_content_setting.popups", 0);
+			chromePrefs.put("download.default.directory",GlobalConstants.DOWNLOAD_FOLDER);
+			options.setExperimentalOption("prefs", options);
+			
 			setDriver(new ChromeDriver(options));
 		} else if (BrowserName.equalsIgnoreCase("coccoc")) {
 			WebDriverManager.chromedriver().driverVersion("81.0.4044.138").setup();
