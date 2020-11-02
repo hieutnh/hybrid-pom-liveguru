@@ -1,2 +1,0 @@
-2020-11-01 14:21:52,911 INFO  com.liveguru.users.Level_16_Data_Generate_3_Export_File - OS name = windows 10
-2020-11-01 14:21:53,576 INFO  com.liveguru.users.Level_16_Data_Generate_3_Export_File - ---------- QUIT BROWSER SUCCESS ----------

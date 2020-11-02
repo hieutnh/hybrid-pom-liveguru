@@ -1,5 +1,6 @@
 package commons;
 
+import java.io.File;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.Random;
@@ -20,6 +21,7 @@ import org.openqa.selenium.safari.SafariDriver;
 import org.openqa.selenium.safari.SafariOptions;
 import org.testng.Assert;
 import org.testng.Reporter;
+import org.testng.annotations.BeforeSuite;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
@@ -38,7 +40,7 @@ public class AbstractTest {
 		if (BrowserName.equalsIgnoreCase("firefox_ui")) {
 			WebDriverManager.firefoxdriver().setup();
 			FirefoxOptions options = new FirefoxOptions();
-			//downloadfile
+			// downloadfile
 			options.addPreference("browser.download.folderList", 2);
 			options.addPreference("browser.download.dir", GlobalConstants.DOWNLOAD_FOLDER);
 			options.addPreference("browser.download.userDownloadDir", true);
@@ -51,13 +53,13 @@ public class AbstractTest {
 			// dissable infobars chrome
 			options.setExperimentalOption("excludeSwitches", Collections.singletonList("enable-automation"));
 			options.setExperimentalOption("useAutomationExtension", false);
-			
-			//download file
+
+			// download file
 			HashMap<String, Object> chromePrefs = new HashMap<String, Object>();
 			chromePrefs.put("profile.default_content_setting.popups", 0);
-			chromePrefs.put("download.default.directory",GlobalConstants.DOWNLOAD_FOLDER);
+			chromePrefs.put("download.default.directory", GlobalConstants.DOWNLOAD_FOLDER);
 			options.setExperimentalOption("prefs", options);
-			
+
 			setDriver(new ChromeDriver(options));
 		} else if (BrowserName.equalsIgnoreCase("coccoc")) {
 			WebDriverManager.chromedriver().driverVersion("81.0.4044.138").setup();
@@ -232,11 +234,35 @@ public class AbstractTest {
 		return String.valueOf(now.getYear());
 	}
 
-	//config theo dự án, và format dd/mm/yyyy
+	@BeforeSuite
+	private void deleteAllFileInReportNGScreenShot() {
+		System.out.println("-------------------START delete file in folder-------------------");
+		deleteAllFileInFolder();
+		System.out.println("-------------------END delete file in folder-------------------");
+	}
+
+	private void deleteAllFileInFolder() {
+		try {
+			String workingDir = System.getProperty("user.dir");
+			String pathFolderDownload = workingDir + "\\ReportNGScreenShots";
+			File file = new File(pathFolderDownload);
+			File[] listOfFiles = file.listFiles();
+			for (int i = 0; i < listOfFiles.length; i++) {
+				if (listOfFiles[i].isFile()) {
+					System.out.println(listOfFiles[i].getName());
+					new File(listOfFiles[i].toString()).delete();
+				}
+			}
+		} catch (Exception e) {
+			System.out.println(e.getMessage());
+		}
+	}
+
+	// config theo dự án, và format dd/mm/yyyy
 	protected String getToday() {
 		return getCurrentYear() + "-" + getCurrentMonth() + "-" + getCurrentDay();
 	}
-	
+
 	protected int getRanDom() {
 		Random rand = new Random();
 		return rand.nextInt(999999);

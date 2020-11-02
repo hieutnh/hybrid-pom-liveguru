@@ -3,6 +3,7 @@
 	<parameter name="url" value="http://live.demoguru99.com/" />
 	<listeners>
 		<listener class-name="commons.MethodListener" />
+		<listener class-name="reportConfig.ReportNGListener" />
 		<!-- Version 2 -->
 		<!-- <listener class-name="reportConfig.ExtentReportListener2"/> -->
 
