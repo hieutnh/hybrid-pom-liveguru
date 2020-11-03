@@ -1,6 +1,4 @@
-package reportConfig;
 //package reportConfig;
-//
 //
 //import java.util.Calendar;
 //import java.util.Date;
@@ -20,8 +18,8 @@ package reportConfig;
 //import com.relevantcodes.extentreports.ExtentTest;
 //import com.relevantcodes.extentreports.LogStatus;
 //
-//public class ExtentReportListener implements IReporter {
-//    private ExtentReports extent;
+//public class ExtentReportListener2 implements IReporter {
+//	private ExtentReports extent;
 //	private ExtentTest test;
 //
 //	public void generateReport(List<XmlSuite> xmlSuites, List<ISuite> suites, String outputDirectory) {
@@ -73,5 +71,3 @@ package reportConfig;
 //		Reporter.log(message);
 //	}
 //}
-
-
