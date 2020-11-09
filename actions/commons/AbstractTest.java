@@ -49,16 +49,17 @@ public class AbstractTest {
 			setDriver(new FirefoxDriver());
 		} else if (BrowserName.equalsIgnoreCase("chrome_ui")) {
 			WebDriverManager.chromedriver().setup();
+			// download file
+			HashMap<String, Object> chromePrefs = new HashMap<String, Object>();
+			chromePrefs.put("profile.default_content_setting.popups", 0);
+			chromePrefs.put("download.default.directory", GlobalConstants.DOWNLOAD_FOLDER);
+			
 			ChromeOptions options = new ChromeOptions();
 			// dissable infobars chrome
 			options.setExperimentalOption("excludeSwitches", Collections.singletonList("enable-automation"));
 			options.setExperimentalOption("useAutomationExtension", false);
 
-			// download file
-			HashMap<String, Object> chromePrefs = new HashMap<String, Object>();
-			chromePrefs.put("profile.default_content_setting.popups", 0);
-			chromePrefs.put("download.default.directory", GlobalConstants.DOWNLOAD_FOLDER);
-			options.setExperimentalOption("prefs", options);
+			options.setExperimentalOption("prefs", chromePrefs);
 
 			setDriver(new ChromeDriver(options));
 		} else if (BrowserName.equalsIgnoreCase("coccoc")) {
