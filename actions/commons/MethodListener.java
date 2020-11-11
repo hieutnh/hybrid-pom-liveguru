@@ -8,6 +8,7 @@ import org.testng.ITestResult;
 import org.testng.Reporter;
 import org.testng.internal.Utils;
 
+// hàm để verify có fail cũng pass qua step tiếp theo
 public class MethodListener implements IInvokedMethodListener {
 	@Override
 	public void beforeInvocation(IInvokedMethod method, ITestResult result) {

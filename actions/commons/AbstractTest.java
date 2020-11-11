@@ -44,23 +44,25 @@ public class AbstractTest {
 			options.addPreference("browser.download.folderList", 2);
 			options.addPreference("browser.download.dir", GlobalConstants.DOWNLOAD_FOLDER);
 			options.addPreference("browser.download.userDownloadDir", true);
-			options.addPreference("browser.helperApps.neverAsk.saveToDisk", "application/pfd");
+			//download file csv
+			options.addPreference("browser.helperApps.neverAsk.saveToDisk", "application/octet-stream");
+			//download file pdf
+			options.addPreference("browser.helperApps.neverAsk.saveToDisk", "application/csv");
 			options.addPreference("pdfjs.disabled", true);
 			setDriver(new FirefoxDriver());
 		} else if (BrowserName.equalsIgnoreCase("chrome_ui")) {
 			WebDriverManager.chromedriver().setup();
+			
 			// download file
 			HashMap<String, Object> chromePrefs = new HashMap<String, Object>();
-			chromePrefs.put("profile.default_content_setting.popups", 0);
-			chromePrefs.put("download.default.directory", GlobalConstants.DOWNLOAD_FOLDER);
-			
+			chromePrefs.put("profile.default_content_settings.popups", 0);
+			chromePrefs.put("download.default_directory", GlobalConstants.DOWNLOAD_FOLDER);
 			ChromeOptions options = new ChromeOptions();
+			options.setExperimentalOption("prefs", chromePrefs);
+			
 			// dissable infobars chrome
 			options.setExperimentalOption("excludeSwitches", Collections.singletonList("enable-automation"));
 			options.setExperimentalOption("useAutomationExtension", false);
-
-			options.setExperimentalOption("prefs", chromePrefs);
-
 			setDriver(new ChromeDriver(options));
 		} else if (BrowserName.equalsIgnoreCase("coccoc")) {
 			WebDriverManager.chromedriver().driverVersion("81.0.4044.138").setup();
