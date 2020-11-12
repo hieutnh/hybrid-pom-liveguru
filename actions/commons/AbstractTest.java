@@ -11,14 +11,12 @@ import org.apache.commons.logging.LogFactory;
 import org.joda.time.DateTime;
 import org.joda.time.DateTimeZone;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebDriver.Options;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.safari.SafariDriver;
-import org.openqa.selenium.safari.SafariOptions;
 import org.testng.Assert;
 import org.testng.Reporter;
 import org.testng.annotations.BeforeSuite;
@@ -59,6 +57,10 @@ public class AbstractTest {
 			chromePrefs.put("download.default_directory", GlobalConstants.DOWNLOAD_FOLDER);
 			ChromeOptions options = new ChromeOptions();
 			options.setExperimentalOption("prefs", chromePrefs);
+			
+			//Your connection is not private
+			options.addArguments("test-type");
+		    options.addArguments("ignore-certificate-errors");
 			
 			// dissable infobars chrome
 			options.setExperimentalOption("excludeSwitches", Collections.singletonList("enable-automation"));
