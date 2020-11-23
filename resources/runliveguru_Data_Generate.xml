@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<suite name="Suite" parallel="tests" thread-cound="1">
+<suite name="Suite" parallel="tests" thread-cound="2">
 	<parameter name="url" value="http://live.demoguru99.com/" />
 	<listeners>
 		<listener class-name="commons.MethodListener" />
@@ -12,7 +12,7 @@
 		<!-- <listener class-name="reportConfig.ExtentTestListener3"/> -->
 
 		<!-- Version 4 -->
-<!-- 		<listener class-name="reportConfig.ExtentReportListener4" /> -->
+		<!-- <listener class-name="reportConfig.ExtentReportListener4" /> -->
 		<listener class-name="org.uncommons.reportng.HTMLReporter" />
 		<listener class-name="org.uncommons.reportng.JUnitXMLReporter" />
 	</listeners>
@@ -24,13 +24,13 @@
 	</test>
 
 
-	<!-- <test name="Run on Chrome UI"> -->
-	<!-- <parameter name="Browser" value="chrome_ui" /> -->
-	<!-- <classes> -->
-	<!-- <class name="com.liveguru.users.Level_13_Browser_Driver_Factory_Pattern_Parallel_ThreadLocal" /> -->
-	<!-- </classes> -->
-	<!-- </test> -->
-
+	<test name="Run on Chrome UI">
+		<parameter name="Browser" value="chrome_ui" />
+		<classes>
+			<class name="com.liveguru.users.Level_16_Data_Generate_3_Export_File_AddCapture" />
+		</classes>
+	</test>
+	
 	<!-- <test name="Run on Firefox HEADLESS"> -->
 	<!-- <parameter name="Browser" value="firefox_headless" /> -->
 	<!-- <classes> -->

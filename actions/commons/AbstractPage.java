@@ -240,6 +240,11 @@ public class AbstractPage {
 		element = getElement(driver, locator);
 		return element.getAttribute(attributeName);
 	}
+	
+	public String getElementAttribute(WebDriver driver, String locator, String attributeName, String... values) {
+		element = getElement(driver, getDynamicLocator(locator, values));
+		return element.getAttribute(attributeName);
+	}
 
 	public String getElementText(WebDriver driver, String locator) {
 		element = getElement(driver, locator);
