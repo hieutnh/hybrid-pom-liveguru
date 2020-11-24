@@ -81,7 +81,8 @@ public class Level_13_Browser_Driver_Factory_Pattern_Parallel_ThreadLocal extend
 		myWishlist13Page.clickToAllLinkMyDashBoard13(driver, "My Applications");
 		myDashBoard13Page = PageGeneratorManager.getmyDashBoardPage13(driver);
 		
-		driver = driverManager.quitDriver();
+		driverManager.removeDriver();
+//		driverManager.quitDriver();
 	}
 //
 //	@AfterClass

@@ -8,12 +8,10 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
-import com.liveguru.data.DataEndUser;
 import com.liveguru.data.EndUserJson;
 import com.relevantcodes.extentreports.LogStatus;
 
 import commons.AbstractTest;
-import commons.DataHelper;
 import commons.GlobalConstants;
 import driverFactory.DriverManager;
 import pageObjects_liveguru.PageGeneratorManager;

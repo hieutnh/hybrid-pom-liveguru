@@ -464,3 +464,57 @@
 2020-11-16 18:22:19,384 INFO  com.liveguru.users.Level_16_Data_Generate_3_Export_File_AddCapture - OS name = windows 10
 2020-11-16 18:22:19,503 INFO  com.liveguru.users.Level_16_Data_Generate_3_Export_File_AddCapture - ---------- QUIT BROWSER SUCCESS ----------
 2020-11-16 18:22:20,013 INFO  com.liveguru.users.Level_16_Data_Generate_3_Export_File_AddCapture - ---------- QUIT BROWSER SUCCESS ----------
+2020-11-24 10:16:02,197 INFO  com.liveguru.users.Level_16_Data_Generate_3_Export_File_AddCapture - OS name = windows 10
+2020-11-24 10:16:02,752 INFO  com.liveguru.users.Level_16_Data_Generate_3_Export_File_AddCapture - ---------- QUIT BROWSER SUCCESS ----------
+2020-11-24 10:16:04,056 INFO  com.liveguru.users.Level_16_Data_Generate_3_Export_File_AddCapture - OS name = windows 10
+2020-11-24 10:16:04,679 INFO  com.liveguru.users.Level_16_Data_Generate_3_Export_File_AddCapture - ---------- QUIT BROWSER SUCCESS ----------
+2020-11-24 11:06:54,524 INFO  com.liveguru.users.Level_16_Data_Generate_3_Export_File_AddCapture - OS name = windows 10
+2020-11-24 11:06:55,064 INFO  com.liveguru.users.Level_16_Data_Generate_3_Export_File_AddCapture - ---------- QUIT BROWSER SUCCESS ----------
+2020-11-24 11:06:56,558 INFO  com.liveguru.users.Level_16_Data_Generate_3_Export_File_AddCapture - OS name = windows 10
+2020-11-24 11:06:57,210 INFO  com.liveguru.users.Level_16_Data_Generate_3_Export_File_AddCapture - ---------- QUIT BROWSER SUCCESS ----------
+2020-11-24 14:49:07,655 INFO  com.liveguru.users.Level_13_Browser_Driver_Factory_Pattern_Parallel_ThreadLocal - Register - Step 01: Open home page
+2020-11-24 14:49:07,665 INFO  com.liveguru.users.Level_13_Browser_Driver_Factory_Pattern_Parallel_ThreadLocal - Register - Step 02: Click Accont Header
+2020-11-24 14:49:07,977 INFO  com.liveguru.users.Level_13_Browser_Driver_Factory_Pattern_Parallel_ThreadLocal - Register - Step 03: Click register Header
+2020-11-24 14:49:09,042 INFO  com.liveguru.users.Level_13_Browser_Driver_Factory_Pattern_Parallel_ThreadLocal - Register - Step 01: Open home page
+2020-11-24 14:49:09,042 INFO  com.liveguru.users.Level_13_Browser_Driver_Factory_Pattern_Parallel_ThreadLocal - Register - Step 02: Click Accont Header
+2020-11-24 14:49:09,130 INFO  com.liveguru.users.Level_13_Browser_Driver_Factory_Pattern_Parallel_ThreadLocal - Register - Step 03: Click register Header
+2020-11-24 14:49:11,603 INFO  com.liveguru.users.Level_13_Browser_Driver_Factory_Pattern_Parallel_ThreadLocal - Register - Step 04: Input all field request to register
+2020-11-24 14:49:12,647 INFO  com.liveguru.users.Level_13_Browser_Driver_Factory_Pattern_Parallel_ThreadLocal - Register - Step 04: Input all field request to register
+2020-11-24 14:49:12,965 INFO  com.liveguru.users.Level_13_Browser_Driver_Factory_Pattern_Parallel_ThreadLocal - Register - Step 05: Click button register
+2020-11-24 14:49:15,349 INFO  com.liveguru.users.Level_13_Browser_Driver_Factory_Pattern_Parallel_ThreadLocal - Register - Step 05: Click button register
+2020-11-24 14:49:18,248 INFO  com.liveguru.users.Level_13_Browser_Driver_Factory_Pattern_Parallel_ThreadLocal - MyDashBoard - Step 01: Click Address Book button
+2020-11-24 14:49:18,348 INFO  com.liveguru.users.Level_13_Browser_Driver_Factory_Pattern_Parallel_ThreadLocal - MyDashBoard - Step 01: Click Address Book button
+2020-11-24 14:49:21,367 INFO  com.liveguru.users.Level_13_Browser_Driver_Factory_Pattern_Parallel_ThreadLocal - MyDashBoard - Step 02: Click My Orders button
+2020-11-24 14:49:23,677 INFO  com.liveguru.users.Level_13_Browser_Driver_Factory_Pattern_Parallel_ThreadLocal - MyDashBoard - Step 02: Click My Orders button
+2020-11-24 14:49:24,003 INFO  com.liveguru.users.Level_13_Browser_Driver_Factory_Pattern_Parallel_ThreadLocal - MyDashBoard - Step 03: Click My Wishlist button
+2020-11-24 14:49:26,676 INFO  com.liveguru.users.Level_13_Browser_Driver_Factory_Pattern_Parallel_ThreadLocal - MyDashBoard - Step 04: Click My Applications button
+2020-11-24 14:49:28,590 INFO  com.liveguru.users.Level_13_Browser_Driver_Factory_Pattern_Parallel_ThreadLocal - MyDashBoard - Step 03: Click My Wishlist button
+2020-11-24 14:49:33,505 INFO  com.liveguru.users.Level_13_Browser_Driver_Factory_Pattern_Parallel_ThreadLocal - MyDashBoard - Step 04: Click My Applications button
+2020-11-24 14:51:19,664 INFO  com.liveguru.users.Level_13_Browser_Driver_Factory_Pattern_Parallel_ThreadLocal - Register - Step 01: Open home page
+2020-11-24 14:51:19,666 INFO  com.liveguru.users.Level_13_Browser_Driver_Factory_Pattern_Parallel_ThreadLocal - Register - Step 02: Click Accont Header
+2020-11-24 14:51:19,954 INFO  com.liveguru.users.Level_13_Browser_Driver_Factory_Pattern_Parallel_ThreadLocal - Register - Step 03: Click register Header
+2020-11-24 14:51:21,585 INFO  com.liveguru.users.Level_13_Browser_Driver_Factory_Pattern_Parallel_ThreadLocal - Register - Step 01: Open home page
+2020-11-24 14:51:21,585 INFO  com.liveguru.users.Level_13_Browser_Driver_Factory_Pattern_Parallel_ThreadLocal - Register - Step 02: Click Accont Header
+2020-11-24 14:51:21,665 INFO  com.liveguru.users.Level_13_Browser_Driver_Factory_Pattern_Parallel_ThreadLocal - Register - Step 03: Click register Header
+2020-11-24 14:51:24,355 INFO  com.liveguru.users.Level_13_Browser_Driver_Factory_Pattern_Parallel_ThreadLocal - Register - Step 04: Input all field request to register
+2020-11-24 14:51:24,609 INFO  com.liveguru.users.Level_13_Browser_Driver_Factory_Pattern_Parallel_ThreadLocal - Register - Step 04: Input all field request to register
+2020-11-24 14:51:24,883 INFO  com.liveguru.users.Level_13_Browser_Driver_Factory_Pattern_Parallel_ThreadLocal - Register - Step 05: Click button register
+2020-11-24 14:51:27,996 INFO  com.liveguru.users.Level_13_Browser_Driver_Factory_Pattern_Parallel_ThreadLocal - Register - Step 05: Click button register
+2020-11-24 14:51:30,195 INFO  com.liveguru.users.Level_13_Browser_Driver_Factory_Pattern_Parallel_ThreadLocal - MyDashBoard - Step 01: Click Address Book button
+2020-11-24 14:51:31,025 INFO  com.liveguru.users.Level_13_Browser_Driver_Factory_Pattern_Parallel_ThreadLocal - MyDashBoard - Step 01: Click Address Book button
+2020-11-24 14:51:33,839 INFO  com.liveguru.users.Level_13_Browser_Driver_Factory_Pattern_Parallel_ThreadLocal - MyDashBoard - Step 02: Click My Orders button
+2020-11-24 14:51:35,386 INFO  com.liveguru.users.Level_13_Browser_Driver_Factory_Pattern_Parallel_ThreadLocal - MyDashBoard - Step 02: Click My Orders button
+2020-11-24 14:51:36,471 INFO  com.liveguru.users.Level_13_Browser_Driver_Factory_Pattern_Parallel_ThreadLocal - MyDashBoard - Step 03: Click My Wishlist button
+2020-11-24 14:51:38,885 INFO  com.liveguru.users.Level_13_Browser_Driver_Factory_Pattern_Parallel_ThreadLocal - MyDashBoard - Step 04: Click My Applications button
+2020-11-24 14:51:40,059 INFO  com.liveguru.users.Level_13_Browser_Driver_Factory_Pattern_Parallel_ThreadLocal - MyDashBoard - Step 03: Click My Wishlist button
+2020-11-24 14:51:45,967 INFO  com.liveguru.users.Level_13_Browser_Driver_Factory_Pattern_Parallel_ThreadLocal - MyDashBoard - Step 04: Click My Applications button
+2020-11-24 17:02:03,655 INFO  com.liveguru.users.Level_16_Data_Generate_3_Export_File_AddCapture - OS name = windows 10
+2020-11-24 17:02:04,312 INFO  com.liveguru.users.Level_16_Data_Generate_3_Export_File_AddCapture - ---------- QUIT BROWSER SUCCESS ----------
+2020-11-24 18:26:50,532 INFO  com.liveguru.users.Level_16_Data_Generate_3_Export_File_AddCapture - OS name = windows 10
+2020-11-24 18:26:50,705 INFO  com.liveguru.users.Level_16_Data_Generate_3_Export_File_AddCapture - OS name = windows 10
+2020-11-24 18:26:51,174 INFO  com.liveguru.users.Level_16_Data_Generate_3_Export_File_AddCapture - ---------- QUIT BROWSER SUCCESS ----------
+2020-11-24 18:26:51,248 INFO  com.liveguru.users.Level_16_Data_Generate_3_Export_File_AddCapture - ---------- QUIT BROWSER SUCCESS ----------
+2020-11-24 18:27:40,719 INFO  com.liveguru.users.Level_16_Data_Generate_3_Export_File_AddCapture - OS name = windows 10
+2020-11-24 18:27:41,288 INFO  com.liveguru.users.Level_16_Data_Generate_3_Export_File_AddCapture - ---------- QUIT BROWSER SUCCESS ----------
+2020-11-24 18:27:41,333 INFO  com.liveguru.users.Level_16_Data_Generate_3_Export_File_AddCapture - OS name = windows 10
+2020-11-24 18:27:41,978 INFO  com.liveguru.users.Level_16_Data_Generate_3_Export_File_AddCapture - ---------- QUIT BROWSER SUCCESS ----------
