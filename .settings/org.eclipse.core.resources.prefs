@@ -17,6 +17,7 @@ encoding//actions/pageObjects_liveguru/myWishlist13PageObject.java=UTF-8
 encoding//actions/pageObjects_liveguru/register13PageObject.java=UTF-8
 encoding//actions/pageObjects_liveguru/tvPageObject.java=UTF-8
 encoding//interfaces/pageUIs/AbstractPageUI.java=UTF-8
+encoding//testData/com/liveguru/data/DataEndUser.java=UTF-8
 encoding//testcases/com/liveguru/users/Level_08_Data_Table.java=UTF-8
 encoding//testcases/com/liveguru/users/Level_09_Upload_Multiple.java=UTF-8
 encoding//testcases/com/liveguru/users/Level_10_Element_Undisplay.java=UTF-8
