@@ -239,6 +239,11 @@ public class AbstractTest {
 		return String.valueOf(now.getYear());
 	}
 
+	// config theo dự án, và format dd/mm/yyyy
+	protected String getToday() {
+		return getCurrentYear() + "-" + getCurrentMonth() + "-" + getCurrentDay();
+	}
+	
 	@BeforeSuite
 	private void deleteAllFileInReportNGScreenShot() {
 		System.out.println("-------------------START delete file in folder-------------------");
@@ -263,10 +268,6 @@ public class AbstractTest {
 		}
 	}
 
-	// config theo dự án, và format dd/mm/yyyy
-	protected String getToday() {
-		return getCurrentYear() + "-" + getCurrentMonth() + "-" + getCurrentDay();
-	}
 
 	protected int getRanDom() {
 		Random rand = new Random();
