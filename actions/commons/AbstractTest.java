@@ -254,7 +254,7 @@ public class AbstractTest {
 	private void deleteAllFileInFolder() {
 		try {
 			String workingDir = System.getProperty("user.dir");
-			String pathFolderDownload = workingDir + "\\ReportNGScreenShots";
+			String pathFolderDownload = workingDir + "\\logFile\\";
 			File file = new File(pathFolderDownload);
 			File[] listOfFiles = file.listFiles();
 			for (int i = 0; i < listOfFiles.length; i++) {
