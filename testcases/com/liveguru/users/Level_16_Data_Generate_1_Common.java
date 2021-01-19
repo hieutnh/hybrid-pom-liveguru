@@ -42,10 +42,13 @@ public class Level_16_Data_Generate_1_Common extends AbstractTest {
 		homePage.clickAccountHeader();
 		register13Page = homePage.clickRegisterHeader();
 
+		//Biến fix cứng (local)
 		register13Page.inputAllFielsRegister(data.getFirstName(), "firstname");
 		register13Page.inputAllFielsRegister(tendem, "middlename");
 		register13Page.inputAllFielsRegister(data.getLastName(), "lastname");
 		register13Page.inputAllFielsRegister(data.getEmail(), "email_address");
+		
+		//Biến global
 		register13Page.inputAllFielsRegister(pass, "password");
 		register13Page.inputAllFielsRegister(pass, "confirmation");
 		myDashBoard13Page = register13Page.clickRegisterButton();

@@ -1,18 +1,16 @@
 package reportConfig;
 
 
-import com.relevantcodes.extentreports.LogStatus;
-
-import commons.AbstractTest;
-import reportConfig.ExtentManager_2_Capture;
-import reportConfig.ExtentTestManager_2_Capture;
-
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
+
+import com.relevantcodes.extentreports.LogStatus;
+
+import commons.AbstractTest;
 
 public class ExtentTestListener_2_Capture extends AbstractTest implements ITestListener {
 
