@@ -60,6 +60,7 @@ public class Level_16_Data_Generate_3_Export_File_AddCapture extends AbstractTes
 		myDashBoard13Page = register13Page.clickRegisterButton();
 
 		removeDriver();
+		
 	}
 
 	private home13PageObject homePage;
